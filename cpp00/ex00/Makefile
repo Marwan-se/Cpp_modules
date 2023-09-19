@@ -1,10 +1,11 @@
 NAME = megaphone
 SRCS = megaphone.cpp
-GPP = g++
+GPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ = $(SRCS:.cpp=.o)
 
 all: $(NAME)
+
 
 $(NAME): $(OBJ)
 	$(GPP) $(FLAGS) $(OBJ) -o $(NAME)
