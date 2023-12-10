@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:55 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/07 12:55:16 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:10:19 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define PHONEBOOK_HPP
 
 # include <iostream>
-#include <cctype>
+# include <iomanip>
+# include <cctype>
 
 class Contact
 {

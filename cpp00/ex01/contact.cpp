@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/07 19:26:18 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/09 18:52:05 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(void)
 
     while (1)
     {
+        system("clear");
         std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
         std::getline(std::cin, command);
         if (command == "EXIT")
@@ -41,12 +42,15 @@ int main(void)
             {
                 std::cout << "Phonebook is empty" << std::endl;
                 std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
+                system("clear");
             }
             else
                 phonebook.get_contact(index);
         }
         else
+        {
             std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
+            system("clear");
+        }
     }
 }
-
