@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: me <me@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/10 18:02:23 by me               ###   ########.fr       */
+/*   Updated: 2023/12/10 20:14:03 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	PhoneBook::get_contact(int index)
 {
 	std::string index_str;
 	int i = 0;
+	int no_index = 0;
 
 	std::cout << " index | first name | last name | nickname " << std::endl;
 	while (i < index)
@@ -76,13 +77,32 @@ void	PhoneBook::get_contact(int index)
 		std::cout << std::setw(10) << this->contacts[i].get_nickname() << std::endl;
 		i++;
 	}
-	std::cout << "Enter an contact index: ";
+	std::cout << "Enter a contact index: ";
+	std::cout << "\n";
 	std::getline(std::cin, index_str);
-	if(index_str[0] == '\0' || index_str.length() > 1 || index_str[0] < '1' || index_str[0] > '8')
-		std::cout << "Wrong index" << std::endl;
 	if(!isdigit(index_str[0]))
+	{
 		std::cout << "The contact index should be a number" << std::endl;
-	if (index_str.length() == 1 && index_str[0] >= '1' && index_str[0] <= '8')
+		std::cout << "\n";
+		get_contact(index);
+		return ;
+	}
+	if(index_str[0] == '\0' || index_str.length() > 1)
+	{
+		std::cout << "Wrong index" << std::endl;
+		std::cout << "\n";
+		get_contact(index);
+		return ;
+	}
+	no_index = index_str[0] - '0';
+	if(no_index > index)
+	{
+		std::cout << "The contact index should be between 1 and " << index << std::endl;
+		std::cout << "\n";
+		get_contact(index);
+		return ;
+	}
+	else
 	{
 		i = index_str[0] - '0';
 		std::cout << "first name: " << this->contacts[i - 1].get_first_name() << std::endl;

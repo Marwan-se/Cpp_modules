@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: me <me@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/10 12:55:25 by me               ###   ########.fr       */
+/*   Updated: 2023/12/10 19:23:53 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int main(void)
     while (1)
     {
         // system("clear");
-        std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
+        std::cout << "Enter a command: ADD(A) | SEARCH(S) | EXIT(E) :" << std::endl;
         std::getline(std::cin, command);
-        if (command == "EXIT")
+        if (command == "EXIT" || command == "E")
             break ;
-        else if (command == "ADD")
+        else if (command == "ADD" || command == "A")
         {
             if(contact_index == 8)
                 contact_index = 0;
@@ -36,20 +36,17 @@ int main(void)
                 break;
             contact_index++;
         }
-        else if (command == "SEARCH")
+        else if (command == "SEARCH" || command == "S")
         {
             if(index == 0)
-            {
                 std::cout << "Phonebook is empty" << std::endl;
-                std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
-            }
             else
                 phonebook.get_contact(index);
         }
-        else
-        {
-            std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
-            // system("clear");
-        }
+        // else
+        // {
+        //     std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
+        //     // system("clear");
+        // }
     }
 }
