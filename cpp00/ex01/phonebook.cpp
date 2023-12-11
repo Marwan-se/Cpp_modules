@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 19:52:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:00:16 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ void	PhoneBook::get_contact(int index)
 		std::cout << "darkest secret: " << this->contacts[i - 1].get_darkest_secret() << std::endl;
 	}
 }
-
+	
 int	PhoneBook::set_contact(int index)
 {
 	std::string arr[5] = {"first name", "last name", "nickname", "phone number", "darkest secret"};
@@ -146,3 +146,17 @@ int	PhoneBook::set_contact(int index)
 	}
 	return (0);
 }
+
+// void	Contact::set_fields(int f_index, std::string command)
+// {
+// 	if (f_index == 0)
+// 		this->set_first_name(command);
+// 	if (f_index == 1)
+// 		this->set_last_name(command);
+// 	if (f_index == 2)
+// 		this->set_nickname(command);
+// 	if (f_index == 3)
+// 		this->set_phone_number(command);
+// 	if (f_index == 4)
+// 		this->set_darkest_secret(command);
+// }
