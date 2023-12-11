@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/10 19:23:53 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:08:29 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,7 @@ int main(void)
             else
                 phonebook.get_contact(index);
         }
-        // else
-        // {
-        //     std::cout << "Enter a command:( ADD | SEARCH | EXIT :)" << std::endl;
-        //     // system("clear");
-        // }
+        else
+            std::cout << "Invalid command" << std::endl;
     }
 }
