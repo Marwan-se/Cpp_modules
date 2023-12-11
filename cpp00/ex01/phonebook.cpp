@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 19:44:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 19:52:05 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,24 +132,17 @@ int	PhoneBook::set_contact(int index)
 				std::getline(std::cin, command);
 			}
 		}
-		this->contacts[index].set_fields(i, command);
+		if(i == 0)
+			this->contacts[index].set_first_name(command);
+		if(i == 1)
+			this->contacts[index].set_last_name(command);
+		if(i == 2)
+			this->contacts[index].set_nickname(command);
+		if(i == 3)
+			this->contacts[index].set_phone_number(command);
+		if(i == 4)
+			this->contacts[index].set_darkest_secret(command);
 		i++;
 	}
 	return (0);
 }
-
-void	Contact::set_fields(int f_index, std::string command)
-{
-	if (f_index == 0)
-		this->set_first_name(command);
-	if (f_index == 1)
-		this->set_last_name(command);
-	if (f_index == 2)
-		this->set_nickname(command);
-	if (f_index == 3)
-		this->set_phone_number(command);
-	if (f_index == 4)
-		this->set_darkest_secret(command);
-}
-
-
