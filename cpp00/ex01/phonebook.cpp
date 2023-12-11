@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 21:01:20 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:07:22 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ int	PhoneBook::set_contact(int index)
 				std::cout << "The " << arr[i] << " field is empty" << std::endl;
 				std::cout << "Enter " << arr[i] << ": ";
 				std::getline(std::cin, command);
+
 			}
 		}
 		if(i == 0)
