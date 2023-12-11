@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 19:22:36 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 19:44:11 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,24 +117,39 @@ int	PhoneBook::set_contact(int index)
 {
 	std::string arr[5] = {"first name", "last name", "nickname", "phone number", "darkest secret"};
 	std::string command;
+	int i = 0;
 	
-	while(index < 5)
+	while(i < 5)
 	{
-		std::cout << "Enter " << arr[index] << ": ";
+		std::cout << "Enter " << arr[i] << ": ";
 		std::getline(std::cin, command);
-		if(command.empty())
+		if (command.empty())
 		{
-			std::cout << "The " << arr[index] << " should not be empty" << std::endl;
-			std::cout << "\n";
-			set_contact(index);
-			return 0;
+			while(command.empty())
+			{
+				std::cout << "The " << arr[i] << " field is empty" << std::endl;
+				std::cout << "Enter " << arr[i] << ": ";
+				std::getline(std::cin, command);
+			}
 		}
-		this->contacts[index].set_first_name(command);
-		this->contacts[index].set_last_name(command);
-		this->contacts[index].set_nickname(command);
-		this->contacts[index].set_phone_number(command);
-		this->contacts[index].set_darkest_secret(command);
-		index++;
+		this->contacts[index].set_fields(i, command);
+		i++;
 	}
 	return (0);
 }
+
+void	Contact::set_fields(int f_index, std::string command)
+{
+	if (f_index == 0)
+		this->set_first_name(command);
+	if (f_index == 1)
+		this->set_last_name(command);
+	if (f_index == 2)
+		this->set_nickname(command);
+	if (f_index == 3)
+		this->set_phone_number(command);
+	if (f_index == 4)
+		this->set_darkest_secret(command);
+}
+
+

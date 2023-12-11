@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:55 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/09 15:10:19 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 19:31:03 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Contact
 		std::string phone_number;
 		std::string darkest_secret;
 	public:
+		void set_fields(int f_index, std::string command);
 		void set_first_name(std::string first_name);
 		void set_last_name(std::string last_name);
 		void set_nickname(std::string nickname);
