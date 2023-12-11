@@ -104,12 +104,11 @@ void	PhoneBook::get_contact(int index)
 	}
 	else
 	{
-		i = index_str[0] - '0';
-		std::cout << "first name: " << this->contacts[i - 1].get_first_name() << std::endl;
-		std::cout << "last name: " << this->contacts[i - 1].get_last_name() << std::endl;
-		std::cout << "nickname: " << this->contacts[i - 1].get_nickname() << std::endl;
-		std::cout << "phone number: " << this->contacts[i - 1].get_phone_number() << std::endl;
-		std::cout << "darkest secret: " << this->contacts[i - 1].get_darkest_secret() << std::endl;
+		std::cout << "first name: " << this->contacts[no_index - 1].get_first_name() << std::endl;
+		std::cout << "last name: " << this->contacts[no_index - 1].get_last_name() << std::endl;
+		std::cout << "nickname: " << this->contacts[no_index - 1].get_nickname() << std::endl;
+		std::cout << "phone number: " << this->contacts[no_index - 1].get_phone_number() << std::endl;
+		std::cout << "darkest secret: " << this->contacts[no_index - 1].get_darkest_secret() << std::endl;
 	}
 }
 
@@ -120,21 +119,27 @@ int	PhoneBook::set_contact(int index)
 	std::string nickname;
 	std::string phone_number;
 	std::string darkest_secret;
+	std::string arr[5] = {"first name", "last name", "nickname", "phone number", "darkest secret"};
 
-	std::cout << "Enter first name: ";
-	std::getline(std::cin, first_name);
-	std::cout << "Enter last name: ";
-	std::getline(std::cin, last_name);
-	std::cout << "Enter nickname: ";
-	std::getline(std::cin, nickname);
-	std::cout << "Enter phone number: ";
-	std::getline(std::cin, phone_number);
-	std::cout << "Enter darkest secret: ";
-	std::getline(std::cin, darkest_secret);
-	this->contacts[index].set_first_name(first_name);
-	this->contacts[index].set_last_name(last_name);
-	this->contacts[index].set_nickname(nickname);
-	this->contacts[index].set_phone_number(phone_number);
-	this->contacts[index].set_darkest_secret(darkest_secret);
+	while(index < 5)
+	{
+		std::cout << "Enter " << arr[index] << ": ";
+		std::getline(std::cin, first_name);
+		if(first_name.empty())
+		{
+			while(first_name.empty())
+			{
+				std::cout << "The " << arr[index] << " should not be empty" << std::endl;
+				std::cout << "Enter " << arr[index] << ": ";
+				std::getline(std::cin, first_name);
+			}
+		}
+		index++;
+		this->contacts[index].set_first_name(first_name);
+		this->contacts[index].set_last_name(last_name);
+		this->contacts[index].set_nickname(nickname);
+		this->contacts[index].set_phone_number(phone_number);
+		this->contacts[index].set_darkest_secret(darkest_secret);
+	}
 	return (0);	
 }
