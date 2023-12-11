@@ -21,6 +21,7 @@ int main(void)
 
     while (1)
     {
+        // system("clear");
         std::cout << "Enter a command: ADD(A) | SEARCH(S) | EXIT(E) :" << std::endl;
         std::getline(std::cin, command);
         if (command == "EXIT" || command == "E")
@@ -32,7 +33,7 @@ int main(void)
             if (index < 8)
                 index++; 
             if (phonebook.set_contact(contact_index))
-                break ;
+                break;
             contact_index++;
         }
         else if (command == "SEARCH" || command == "S")

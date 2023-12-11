@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/10 20:14:03 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/11 19:22:36 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,42 +104,37 @@ void	PhoneBook::get_contact(int index)
 	}
 	else
 	{
-		std::cout << "first name: " << this->contacts[no_index - 1].get_first_name() << std::endl;
-		std::cout << "last name: " << this->contacts[no_index - 1].get_last_name() << std::endl;
-		std::cout << "nickname: " << this->contacts[no_index - 1].get_nickname() << std::endl;
-		std::cout << "phone number: " << this->contacts[no_index - 1].get_phone_number() << std::endl;
-		std::cout << "darkest secret: " << this->contacts[no_index - 1].get_darkest_secret() << std::endl;
+		i = index_str[0] - '0';
+		std::cout << "first name: " << this->contacts[i - 1].get_first_name() << std::endl;
+		std::cout << "last name: " << this->contacts[i - 1].get_last_name() << std::endl;
+		std::cout << "nickname: " << this->contacts[i - 1].get_nickname() << std::endl;
+		std::cout << "phone number: " << this->contacts[i - 1].get_phone_number() << std::endl;
+		std::cout << "darkest secret: " << this->contacts[i - 1].get_darkest_secret() << std::endl;
 	}
 }
 
 int	PhoneBook::set_contact(int index)
 {
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string phone_number;
-	std::string darkest_secret;
 	std::string arr[5] = {"first name", "last name", "nickname", "phone number", "darkest secret"};
-
+	std::string command;
+	
 	while(index < 5)
 	{
 		std::cout << "Enter " << arr[index] << ": ";
-		std::getline(std::cin, first_name);
-		if(first_name.empty())
+		std::getline(std::cin, command);
+		if(command.empty())
 		{
-			while(first_name.empty())
-			{
-				std::cout << "The " << arr[index] << " should not be empty" << std::endl;
-				std::cout << "Enter " << arr[index] << ": ";
-				std::getline(std::cin, first_name);
-			}
+			std::cout << "The " << arr[index] << " should not be empty" << std::endl;
+			std::cout << "\n";
+			set_contact(index);
+			return 0;
 		}
+		this->contacts[index].set_first_name(command);
+		this->contacts[index].set_last_name(command);
+		this->contacts[index].set_nickname(command);
+		this->contacts[index].set_phone_number(command);
+		this->contacts[index].set_darkest_secret(command);
 		index++;
-		this->contacts[index].set_first_name(first_name);
-		this->contacts[index].set_last_name(last_name);
-		this->contacts[index].set_nickname(nickname);
-		this->contacts[index].set_phone_number(phone_number);
-		this->contacts[index].set_darkest_secret(darkest_secret);
 	}
-	return (0);	
+	return (0);
 }
