@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/12 11:46:47 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:17:23 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,6 @@ void	PhoneBook::get_contact(int index)
 	std::cout << "  index   |first name| last name| nickname" << std::endl;
 	while (i < index)
 	{
-		// std::cout << std::setw(10) << i + 1 << "|";
-		// std::cout << std::setw(10) << this->contacts[i].get_first_name() << "|";
-		// std::cout << std::setw(10) << this->contacts[i].get_last_name() << "|";
-		// std::cout << std::setw(10) << this->contacts[i].get_nickname() << std::endl;
 		std::cout << std::setw(10) << i + 1 << "|";
 		std::cout << std::setw(10) << field_len(this->contacts[i].get_first_name()) << "|";
 		std::cout << std::setw(10) << field_len(this->contacts[i].get_last_name()) << "|";

@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:55 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 21:09:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:18:18 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <iomanip>
 # include <cctype>
+# include <string>
 
 class Contact
 {

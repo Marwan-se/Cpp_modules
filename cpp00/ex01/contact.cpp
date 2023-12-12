@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/12 11:39:36 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:17:58 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main(void)
 
     while (1)
     {
-        // system("clear");
         std::cout << "Enter a command: ADD(A) | SEARCH(S) | EXIT(E) :" << std::endl;
         std::getline(std::cin, command);
         if(std::cin.eof())
