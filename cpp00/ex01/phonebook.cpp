@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/12 19:26:40 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 20:37:49 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,14 +102,13 @@ void	PhoneBook::get_contact(int index)
 		return ;
 	if(!isdigit(index_str[0]))
 	{
-		std::cout << "The contact index should be a number" << std::endl;
+		std::cout << " The contact index should be a number " << std::endl;
 		std::cout << "\n";
 		return ;
 	}
 	if(index_str[0] == '\0' || index_str.length() > 1 || index_str[0] == '0')
 	{
-		std::cout << "Wrong index" << std::endl;
-		std::cout << "\n";
+		std::cout << " Wrong index " << std::endl;
 		return ;
 	}
 	no_index = index_str[0] - '0';
