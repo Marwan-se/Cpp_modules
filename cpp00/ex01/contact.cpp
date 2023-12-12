@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/12 18:17:58 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:22:32 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ int main(void)
     int index = 0;
     int contact_index = 0;
 
+    system("clear");
     while (1)
     {
         std::cout << "Enter a command: ADD(A) | SEARCH(S) | EXIT(E) :" << std::endl;
         std::getline(std::cin, command);
         if(std::cin.eof())
             break ;
+        system("clear");
         if (command == "EXIT" || command == "E")
             break ;
         else if (command == "ADD" || command == "A")
