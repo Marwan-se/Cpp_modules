@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/12 18:31:10 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 19:26:40 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,13 @@ std::string Contact::get_darkest_secret()
 
 std::string	field_len(std::string str)
 {
+	std::string space = "          ";
+	if (str.length() < 10)
+	{
+		space.resize(10 - str.length());
+		space.append(str);
+		return (space);
+	}
 	if (str.length() > 10)
 	{
 		str.resize(9);
@@ -81,10 +88,11 @@ void	PhoneBook::get_contact(int index)
 	std::cout << "  index   |first name| last name| nickname" << std::endl;
 	while (i < index)
 	{
-		std::cout << std::setw(10) << i + 1 << "|";
-		std::cout << std::setw(10) << field_len(this->contacts[i].get_first_name()) << "|";
-		std::cout << std::setw(10) << field_len(this->contacts[i].get_last_name()) << "|";
-		std::cout << std::setw(10) << field_len(this->contacts[i].get_nickname()) << std::endl;
+		std::cout << "     ";
+		std::cout << i + 1 << "    |";
+		std::cout << field_len(this->contacts[i].get_first_name()) << "|";
+		std::cout << field_len(this->contacts[i].get_last_name()) << "|";
+		std::cout << field_len(this->contacts[i].get_nickname()) << std::endl;
 		i++;
 	}
 	std::cout << "Enter a contact index: ";
@@ -96,14 +104,12 @@ void	PhoneBook::get_contact(int index)
 	{
 		std::cout << "The contact index should be a number" << std::endl;
 		std::cout << "\n";
-		get_contact(index);
 		return ;
 	}
-	if(index_str[0] == '\0' || index_str.length() > 1)
+	if(index_str[0] == '\0' || index_str.length() > 1 || index_str[0] == '0')
 	{
 		std::cout << "Wrong index" << std::endl;
 		std::cout << "\n";
-		get_contact(index);
 		return ;
 	}
 	no_index = index_str[0] - '0';
@@ -111,7 +117,6 @@ void	PhoneBook::get_contact(int index)
 	{
 		std::cout << "The contact index should be between 1 and " << index << std::endl;
 		std::cout << "\n";
-		get_contact(index);
 		return ;
 	}
 	else

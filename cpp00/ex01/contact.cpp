@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/12 18:31:03 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 18:49:35 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void)
         std::getline(std::cin, command);
         if(std::cin.eof())
             break ;
-        system("clear");
+        
         if (command == "EXIT" || command == "E")
             break ;
         else if (command == "ADD" || command == "A")
@@ -47,6 +47,6 @@ int main(void)
                 phonebook.get_contact(index);
         }
         else
-            std::cout << "Invalid command" << std::endl;
+            std::cout << "\x1b[31m Invalid INPUT \033[0m\n" << std::endl;
     }
 }
