@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 10:14:21 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 21:07:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 11:39:47 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ void	PhoneBook::get_contact(int index)
 	std::cout << "Enter a contact index: ";
 	std::cout << "\n";
 	std::getline(std::cin, index_str);
+	if(std::cin.eof())
+		return ;
 	if(!isdigit(index_str[0]))
 	{
 		std::cout << "The contact index should be a number" << std::endl;
@@ -123,6 +125,8 @@ int	PhoneBook::set_contact(int index)
 	{
 		std::cout << "Enter " << arr[i] << ": ";
 		std::getline(std::cin, command);
+		if(std::cin.eof())
+			return 0;
 		if (command.empty())
 		{
 			while(command.empty())
@@ -130,7 +134,8 @@ int	PhoneBook::set_contact(int index)
 				std::cout << "The " << arr[i] << " field is empty" << std::endl;
 				std::cout << "Enter " << arr[i] << ": ";
 				std::getline(std::cin, command);
-
+				if(std::cin.eof())
+					return 0;
 			}
 		}
 		if(i == 0)
@@ -147,18 +152,3 @@ int	PhoneBook::set_contact(int index)
 	}
 	return (0);
 }
-
-// void	Contact::set_fields(int f_index, std::string command)
-// {
-// 	if (f_index == 0)
-// 		this->set_first_name(command);
-// 	if (f_index == 1)
-// 		this->set_last_name(command);
-// 	if (f_index == 2)
-// 		this->set_nickname(command);
-// 	if (f_index == 3)
-// 		this->set_phone_number(command);
-// 	if (f_index == 4)
-// 		this->set_darkest_secret(command);
-// }
-

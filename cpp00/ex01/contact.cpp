@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 11:54:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/11 21:08:29 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/12 11:39:36 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main(void)
         // system("clear");
         std::cout << "Enter a command: ADD(A) | SEARCH(S) | EXIT(E) :" << std::endl;
         std::getline(std::cin, command);
+        if(std::cin.eof())
+            break ;
         if (command == "EXIT" || command == "E")
             break ;
         else if (command == "ADD" || command == "A")
@@ -33,7 +35,7 @@ int main(void)
             if (index < 8)
                 index++; 
             if (phonebook.set_contact(contact_index))
-                break;
+                break ;
             contact_index++;
         }
         else if (command == "SEARCH" || command == "S")
