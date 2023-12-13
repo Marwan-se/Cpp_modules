@@ -27,5 +27,6 @@ class Contact
 };
 
 std::string	field_len(std::string str);
+bool	valid_phone_number(std::string str);
 
 #endif

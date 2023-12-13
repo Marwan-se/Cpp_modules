@@ -81,7 +81,17 @@ int	PhoneBook::set_contact(int index)
 		if(i == 2)
 			this->contacts[index].set_nickname(command);
 		if(i == 3)
-			this->contacts[index].set_phone_number(command);
+        {
+            while(!valid_phone_number(command) || command.empty())
+            {
+                std::cout << "The phone number is invalid. " << std::endl;
+				std::cout << "Enter a number please : " << std::endl;
+                std::getline(std::cin, command);
+                if(std::cin.eof())
+                    return 0;
+            }
+            this->contacts[index].set_phone_number(command);
+        }
 		if(i == 4)
 			this->contacts[index].set_darkest_secret(command);
 		i++;

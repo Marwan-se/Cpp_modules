@@ -67,3 +67,15 @@ std::string	field_len(std::string str)
 	}
 	return (str);
 }
+
+bool	valid_phone_number(std::string str)
+{
+	int i = 0;
+	while (str[i])
+	{
+		if (!isdigit(str[i]))
+			return (false);
+		i++;
+	}
+	return (true);
+}
