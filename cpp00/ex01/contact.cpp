@@ -50,7 +50,7 @@ void	PhoneBook::get_contact(int index)
 		std::cout << "darkest secret: " << this->contacts[i - 1].get_darkest_secret() << std::endl;
 	}
 }
-	
+
 int	PhoneBook::set_contact(int index)
 {
 	std::string arr[5] = {"first name", "last name", "nickname", "phone number", "darkest secret"};
