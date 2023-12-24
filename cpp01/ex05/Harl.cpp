@@ -34,12 +34,16 @@ void Harl::error( void )
 
 void Harl::complain( std::string level )
 {
+    f ptr[4];
     std::string levels[4] = {"debug", "info", "warning", "error"};
-    void (Harl::*funcs[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    ptr[0] = &Harl::debug;
+    ptr[1] = &Harl::info;
+    ptr[2] = &Harl::warning;
+    ptr[3] = &Harl::error;
     for (int i = 0; i < 4; i++)
     {
         if (levels[i] == level)
-            (this->*funcs[i])();
+            (this->*ptr[i])();
     }
 }
 
