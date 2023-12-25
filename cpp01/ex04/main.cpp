@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 14:13:03 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/25 10:04:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:40:02 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	}
 	if(!s1.length() || !s2.length())
 	{
-		std::cout << "empty s1 || s2" << std::endl;
+		std::cout << "give valid strings!" << std::endl;
 		return (1);
 	}
 	std::string content;
