@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 21:10:54 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/23 11:57:19 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:35:21 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ void HumanB::attack()
 void HumanB::setWeapon(Weapon *weapon)
 {
     this->weapon = weapon;
+}
+
+std::string HumanB::get(void)
+{
+    return (this->name);
 }
