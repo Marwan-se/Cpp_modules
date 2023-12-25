@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 14:13:03 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/23 16:59:13 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:04:50 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int main(int ac, char **av)
 	std::string s2 = av[3];
 	std::ifstream inpf;
 	inpf.open(filename);
-	if(!s1.length() || !s2.length())
-	{
-		std::cout << "empty s1 || s2" << std::endl;
-		return (1);
-	}
 	if (!inpf.is_open())
 	{
 		std::cout << "file does not exist" << std::endl;
+		return (1);
+	}
+	if(!s1.length() || !s2.length())
+	{
+		std::cout << "empty s1 || s2" << std::endl;
 		return (1);
 	}
 	std::string content;
