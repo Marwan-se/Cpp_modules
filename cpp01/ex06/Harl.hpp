@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 01:16:46 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/23 01:35:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:43:01 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Harl
         void error( void );
     public:
         void complain( std::string level );
+        void    set(void);
+        void    get(void);
 };
 
 #endif
