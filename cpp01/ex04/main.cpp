@@ -6,12 +6,23 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 14:13:03 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/25 10:40:02 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 11:54:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+
+void	replace(std::string &content, std::string s1, std::string s2)
+{
+	size_t count = 0;
+	while ((count = content.find(s1, count)) != std::string::npos)
+	{
+		content.erase(count, s1.length());
+		content.insert(count, s2);
+		count += s2.length();
+	}
+}
 
 int main(int ac, char **av)
 {
@@ -45,15 +56,10 @@ int main(int ac, char **av)
 			content += line;
 	}
 	inpf.close();
-	size_t count = 0;
-	while ((count = content.find(s1, count)) != std::string::npos)
-	{
-		content.erase(count, s1.length());
-		content.insert(count, s2);
-		count += s2.length();
-	}
-	std::ofstream ofs(filename + ".replace");
-	ofs << content;
-	ofs.close();
+	replace(content, s1, s2);
+	std::ofstream outpf;
+	outpf.open(filename + ".replace");
+	outpf << content;
+	outpf.close();
 	return (0);
 }
