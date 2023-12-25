@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 10:03:38 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/25 10:03:39 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:30:29 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,8 @@ Zombie::Zombie(std::string name)
 Zombie::~Zombie()
 {
     std::cout << "Zombie destroyed" << std::endl;
+}
+
+Zombie::Zombie()
+{
 }

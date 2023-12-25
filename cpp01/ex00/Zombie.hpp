@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 10:03:45 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/25 10:03:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:29:41 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
     private:
         std::string name;
     public:
+        Zombie();   // default constructor
         Zombie(std::string name);
         ~Zombie();
         void announce(void);
