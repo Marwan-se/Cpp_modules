@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 20:38:00 by msekhsou          #+#    #+#             */
-/*   Updated: 2023/12/22 20:40:29 by msekhsou         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:41:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ class Harl
 	public:
 		Harl( void );
 		~Harl( void );
-		void complain( std::string level );
+		void	complain( std::string level );
+		void	set(void);
+		void	get(void);
 };
 
 typedef void (Harl::*f)(void);
