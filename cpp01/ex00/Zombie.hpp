@@ -6,7 +6,6 @@
 
 class Zombie
 {
-    //private attribute name
     private:
         std::string name;
     public:

@@ -16,7 +16,7 @@ int main(void)
 {
     int i = 0;
     int N = 5;
-    Zombie *zombies = zombieHorde(N, "meriem");
+    Zombie *zombies = zombieHorde(N, "yes");
     while (i < N)
     {
         zombies[i].announce();

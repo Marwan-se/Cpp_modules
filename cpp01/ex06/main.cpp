@@ -27,7 +27,6 @@ int main(int ac, char **av)
 		std::cout << "Probably complaining about insignificant problems " << std::endl;
 		exit (1);
 	}
-	word = av[1];
 	FarlHitler.complain(word);
 	return (0);
 }
