@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 14:45:57 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/03 18:04:50 by msekhsou         ###   ########.fr       */
+/*   Created: 2024/02/03 18:08:58 by msekhsou          #+#    #+#             */
+/*   Updated: 2024/02/03 22:26:49 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <cmath>
 
 const int Fixed::bits_num = 8;
 
@@ -20,18 +21,28 @@ Fixed::Fixed()
     store_fixed_point = 0;
 }
 
+Fixed::Fixed( const int value )
+{
+    std::cout << "Int constructor called" << std::endl;
+    this->store_fixed_point = value << Fixed::bits_num;
+}
+
+Fixed::Fixed( const float value )
+{
+   std::cout << "Float constructor called" << std::endl; 
+   this->store_fixed_point = roundf(value * (1 << Fixed::bits_num));
+}
+
 Fixed::Fixed(const Fixed &value)
 {
     std::cout << "Copy constructor called" << std::endl;
-    //*this refers in main to b
-    //value refers in main to a
     *this = value;
 }
 
 Fixed &Fixed::operator=( const Fixed &value )
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    this->store_fixed_point = value.getRawBits();
+    this->store_fixed_point = value.store_fixed_point;
     return (*this);
 }
 
@@ -49,4 +60,20 @@ int Fixed::getRawBits( void ) const
 void Fixed::setRawBits( int const raw )
 {
     this->store_fixed_point = raw;
+}
+
+float Fixed::toFloat( void ) const
+{
+    return ((float)this->store_fixed_point / (1 << Fixed::bits_num));
+}
+
+int Fixed::toInt( void ) const
+{
+    return (this->store_fixed_point >> Fixed::bits_num);
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &value)
+{
+    out << value.toFloat();
+    return (out);
 }
