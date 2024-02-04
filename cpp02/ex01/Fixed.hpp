@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 18:07:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/03 22:24:47 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/04 16:46:26 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+
 
 class   Fixed
 {

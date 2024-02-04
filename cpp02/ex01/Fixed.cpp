@@ -6,12 +6,11 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 18:08:58 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/03 22:26:49 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/04 16:46:20 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <cmath>
 
 const int Fixed::bits_num = 8;
 
