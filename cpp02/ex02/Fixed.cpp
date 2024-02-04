@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 23:16:16 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/03 23:31:08 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/04 16:47:51 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,35 @@ const int Fixed::bits_num = 8;
 //default constructor
 Fixed::Fixed()
 {
-    // std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called" << std::endl;
     store_fixed_point = 0;
 }
 
 //int constructor
 Fixed::Fixed( const int value )
 {
-    // std::cout << "Int constructor called" << std::endl;
+    std::cout << "Int constructor called" << std::endl;
     this->store_fixed_point = value << Fixed::bits_num;
 }
 
 //float constructor
 Fixed::Fixed( const float value )
 {
-//    std::cout << "Float constructor called" << std::endl; 
+   std::cout << "Float constructor called" << std::endl; 
    this->store_fixed_point = roundf(value * (1 << Fixed::bits_num));
 }
 
 //copy constructor
 Fixed::Fixed(const Fixed &value)
 {
-    // std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
     *this = value;
 }
 
 // copy assignment operator
 Fixed &Fixed::operator=( const Fixed &value )
 {
-    // std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator called" << std::endl;
     this->store_fixed_point = value.store_fixed_point;
     return (*this);
 }
@@ -53,7 +53,7 @@ Fixed &Fixed::operator=( const Fixed &value )
 //destructor
 Fixed::~Fixed()
 {
-    // std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor called" << std::endl;
 }
 
 //comparison != operator
@@ -209,5 +209,3 @@ Fixed Fixed::operator--(int)
     operator--();
     return (tmp);
 }
-
-// done
