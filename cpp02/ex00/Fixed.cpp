@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:45:57 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/04 23:30:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/05 14:19:49 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &value)
 {
     std::cout << "Copy constructor called" << std::endl;
-    //*this refers in main to b
-    //value refers in main to a
     *this = value;
 }
 
