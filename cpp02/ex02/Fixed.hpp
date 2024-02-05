@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 22:29:22 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/05 00:18:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/05 14:23:23 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,16 @@ class   Fixed
     public:
         //default constructor
         Fixed();
-        //int constructor
-        Fixed(const int value);
-        //float constructor
-        Fixed(const float value);
         //copy constructor
         Fixed(const Fixed &value);
         //assignment operator
 		Fixed &operator=(const Fixed &value);
+        //destructor
+        ~Fixed();
+        //int constructor
+        Fixed(const int value);
+        //float constructor
+        Fixed(const float value);
         //comparison operators 6
         bool operator==(const Fixed &value) const;
         bool operator>(const Fixed &value) const;
@@ -56,8 +58,6 @@ class   Fixed
         //max function
         static Fixed &max(Fixed &a, Fixed &b);
         static const Fixed &max(const Fixed &a, const Fixed &b);
-        //destructor
-        ~Fixed();
         //member functions
         int getRawBits( void ) const;
         void setRawBits( int const raw );
