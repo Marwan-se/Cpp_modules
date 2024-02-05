@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 22:29:22 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/04 16:48:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/05 00:18:59 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ class   Fixed
         //assignment operator
 		Fixed &operator=(const Fixed &value);
         //comparison operators 6
+        bool operator==(const Fixed &value) const;
         bool operator>(const Fixed &value) const;
         bool operator<(const Fixed &value) const;
         bool operator>=(const Fixed &value) const;
         bool operator<=(const Fixed &value) const;
-        bool operator==(const Fixed &value) const;
         bool operator!=(const Fixed &value) const;
         //arithmetic operators 4
         Fixed operator+(const Fixed &value) const;

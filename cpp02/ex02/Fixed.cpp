@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 23:16:16 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/04 16:47:51 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/05 00:07:22 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,25 +127,37 @@ std::ostream &operator<<(std::ostream &out, const Fixed &value)
 //arithmetic + operator
 Fixed Fixed::operator+(const Fixed &value) const
 {
-    return (Fixed(this->toFloat() + value.toFloat()));
+    int result = this->getRawBits() + value.getRawBits();
+    Fixed a;
+    a.setRawBits(result);
+    return (a);
 }
 
 //arithmetic - operator
 Fixed Fixed::operator-(const Fixed &value) const
 {
-    return (Fixed(this->toFloat() - value.toFloat()));
+    int result = this->getRawBits() - value.getRawBits();
+    Fixed a;
+    a.setRawBits(result);
+    return (a);
 }
 
 //arithmetic * operator
 Fixed Fixed::operator*(const Fixed &value) const
 {
-    return (Fixed(this->toFloat() * value.toFloat()));
+    int result = (this->getRawBits() * value.getRawBits()) * std::pow(2, -Fixed::bits_num);
+    Fixed a;
+    a.setRawBits(result);
+    return (a);
 }
 
 //arithmetic / operator
 Fixed Fixed::operator/(const Fixed &value) const
 {
-    return (Fixed(this->toFloat() / value.toFloat()));
+    int result = (this->getRawBits() / value.getRawBits()) * std::pow(2, Fixed::bits_num);
+    Fixed a;
+    a.setRawBits(result);
+    return (a);
 }
 
 //min function
