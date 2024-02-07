@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:50:46 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 18:14:15 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:57:33 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class   ScavTrap : public ClapTrap
         //assignment operator
         ScavTrap&operator=(const ScavTrap &rhs);
         //member function
+        void    attack(const std::string &target);
         void    guardGate();
 };
 

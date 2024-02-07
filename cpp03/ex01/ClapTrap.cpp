@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:50:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:51:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:55:20 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,33 @@ ClapTrap::ClapTrap(const std::string &name)
 
 void ClapTrap::attack(const std::string &target)
 {
-	std::cout << "ClapTrap " << this->Name << " attack " << target << " causing " << this->Attack_damage << " points of damage!" << std::endl;
+	if (this->Energy_points > 0)
+	{
+		std::cout << "ClapTrap " << this->Name << " attack " << target << " causing " << this->Attack_damage << " points of damage!" << std::endl;
+		this->Energy_points--;
+	}
+	std::cout << "ClapTrap " << this->Name << " no energy :( " << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->Name << " take " << amount << " points of damage!" << std::endl;
+	if (this->Hit_point > 0)
+	{
+		std::cout << "ClapTrap " << this->Name << " take " << amount << " points of damage!" << std::endl;
+		this->Hit_point -= amount;
+	}
+	std::cout << "ClapTrap " << this->Name << " no points :( " << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->Name << " repaired for " << amount << " points of damage!" << std::endl;
+	if (this->Hit_point > 0)
+	{
+		std::cout << "ClapTrap " << this->Name << " repaired " << amount << " points of damage!" << std::endl;
+		this->Hit_point += amount;
+		this->Energy_points--;
+	}
+	std::cout << "ClapTrap " << this->Name << " no points :( " << std::endl;
 }
 
 int	ClapTrap::getHP() const
@@ -79,4 +95,19 @@ int	ClapTrap::getEP() const
 std::string ClapTrap::getName() const
 {
 	return (this->Name);
+}
+
+void ClapTrap::setHP(int value)
+{
+	this->Hit_point = value;
+}
+
+void ClapTrap::setEP(int value)
+{
+	this->Energy_points = value;
+}
+
+void ClapTrap::setName(std::string value)
+{
+	this->Name = value;
 }

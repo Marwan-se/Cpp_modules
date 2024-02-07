@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:50:51 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:51:57 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:54:58 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class	ClapTrap
 {
-	private:
+	protected:
 		std::string	Name;
 		int	Hit_point;
 		int	Energy_points;
@@ -42,6 +42,10 @@ class	ClapTrap
 		int getHP() const;
 		int getEP() const;
 		std::string getName() const;
+		// Setters
+		void setHP(int value);
+		void setEP(int value);
+		void setName(std::string value);
 };
 
 #endif
