@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:50:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 19:53:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:07:36 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,5 @@ void ScavTrap::attack(const std::string &target)
         std::cout << "ScavTrap " << this->Name << " attack " << target << " causing " << this->Attack_damage << " points of damage!" << std::endl;
         this->Energy_points--;
     }
+    std::cout << "ScavTrap " << this->Name << " no energy :( " << std::endl;
 }
