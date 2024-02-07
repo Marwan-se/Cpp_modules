@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:18:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:47:10 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:52:29 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ class	ClapTrap
 		int getHP() const;
 		int getEP() const;
 		std::string getName() const;
+		// Setters
+		void setHP(int value);
+		void setEP(int value);
+		void setName(std::string value);
 };
 
 #endif

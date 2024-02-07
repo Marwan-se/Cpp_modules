@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:30:41 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:45:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:53:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int main()
     obj1.attack("target");
     obj2.takeDamage(10);
     obj3.beRepaired(5);
+    obj4.setName("Yuta");
+    obj4.setHP(100);
+    obj4.setEP(100);
+
     std::cout << "HP: " << obj4.getHP() << std::endl;
     std::cout << "EP: " << obj4.getEP() << std::endl;
     std::cout << "Name: " << obj4.getName() << std::endl;
