@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:50:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 18:55:20 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 19:53:19 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap constructor called" << std::endl;
 	this->Hit_point = 10;
 	this->Energy_points = 10;
 	this->Attack_damage = 0;
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Default destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=( const ClapTrap &rhs )
