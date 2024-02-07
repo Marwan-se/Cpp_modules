@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:18:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:46:08 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 16:46:16 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class	ClapTrap
 		int	Energy_points;
 		int	Attack_damage;
 	public:
+		// Default constructor
 		ClapTrap();
 		~ClapTrap();
 		ClapTrap(const std::string &name);
