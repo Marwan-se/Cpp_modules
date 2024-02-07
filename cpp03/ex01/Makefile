@@ -1,8 +1,8 @@
 NAME = ClapTrap
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = ClapTrap.hpp
-SRC = main.cpp ClapTrap.cpp
+INC = ClapTrap.hpp ScavTrap.hpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -22,4 +22,3 @@ fclean: clean
 re: fclean $(NAME)
 
 .PHONY: all clean fclean re
-
