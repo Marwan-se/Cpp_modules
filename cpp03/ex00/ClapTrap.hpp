@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:18:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:46:30 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 16:46:36 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class	ClapTrap
 		ClapTrap();
 		// destructor
 		~ClapTrap();
+		// Parameterized constructor
 		ClapTrap(const std::string &name);
 		ClapTrap(const ClapTrap &value);
 		ClapTrap &operator=(const ClapTrap &rhs);
