@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = ScavTrap
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 INC = ClapTrap.hpp ScavTrap.hpp
