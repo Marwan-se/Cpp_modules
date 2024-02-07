@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:18:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 16:46:53 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 16:47:01 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class	ClapTrap
 		ClapTrap(const ClapTrap &value);
 		// Assignation operator
 		ClapTrap &operator=(const ClapTrap &rhs);
+		// Member functions
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
