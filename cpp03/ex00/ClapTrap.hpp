@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:18:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 15:39:12 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 16:46:08 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <iostream>
 # include <string>
-
 
 class	ClapTrap
 {
