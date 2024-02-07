@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 19:07:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 19:09:57 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 19:59:34 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class   FragTrap : public ClapTrap
         FragTrap&operator=(const FragTrap &rhs);
         //member function
         void    highFivesGuys();
+        void    attack(const std::string &target);
 };
 
 #endif
