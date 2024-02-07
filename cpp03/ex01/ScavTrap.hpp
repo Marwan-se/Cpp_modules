@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:50:46 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/07 18:12:25 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/07 18:14:15 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,18 @@
 class   ScavTrap : public ClapTrap
 {
     public:
+        //default constructor
         ScavTrap();
+        //parameterized constructor
         ScavTrap(std::string name);
-        ScavTrap(const ScavTrap &copy);
+        //copy constructor
+        ScavTrap(const ScavTrap &value);
+        //destructor
         ~ScavTrap();
-
-        ScavTrap&   operator=(const ScavTrap &copy);
-
-        void        challengeNewcomer(std::string const & target);
+        //assignment operator
+        ScavTrap&operator=(const ScavTrap &rhs);
+        //member function
+        void    guardGate();
 };
 
 
