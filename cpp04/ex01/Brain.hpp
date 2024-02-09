@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:30:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:31:53 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 23:05:16 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class   Brain
         //setters
         void setIdea(int index, std::string value);
         //member functions
-        void printIdeas() const;
+        // void printIdeas() const;
 };
 
 #endif

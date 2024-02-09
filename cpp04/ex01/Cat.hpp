@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 21:46:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 23:15:07 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class   Cat : public Animal
 {
+    private:
+        Brain *brain;
     public:
         //default constructor
         Cat();
