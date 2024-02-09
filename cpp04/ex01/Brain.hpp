@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 21:07:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:33:49 by msekhsou         ###   ########.fr       */
+/*   Created: 2024/02/09 22:30:15 by msekhsou          #+#    #+#             */
+/*   Updated: 2024/02/09 22:31:53 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <iostream>
 #include <string>
 
-class WrongAnimal
+class   Brain
 {
-    protected:
-        std::string type;
+    private:
+        std::string ideas[100];
     public:
         //default constructor
-        WrongAnimal();
+        Brain();
         //copy constructor
-        WrongAnimal(const WrongAnimal &copy);
+        Brain(const Brain &copy);
         //assignment operator
-        WrongAnimal &operator=(const WrongAnimal &rhs);
+        Brain &operator=(const Brain &rhs);
         //destructor
-        virtual ~WrongAnimal();
+        ~Brain();
         //getters
-        std::string getType() const;
+        std::string getIdea(int index) const;
         //setters
-        void setType(std::string value);
+        void setIdea(int index, std::string value);
         //member functions
-        void makeSound() const;
+        void printIdeas() const;
 };
 
 #endif
