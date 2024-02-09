@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/08 19:27:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 21:46:22 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class   Cat : public Animal
         std::string getType();
         //setters
         void setType(std::string value);
+        //member functions
+        void makeSound() const;
 };
 
 #endif
