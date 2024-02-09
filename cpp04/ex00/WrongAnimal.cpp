@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:12:03 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:17:10 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 22:24:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ WrongAnimal::~WrongAnimal()
     std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-std::string WrongAnimal::getType()
+std::string WrongAnimal::getType() const
 {
     return (this->type);
 }
@@ -46,7 +46,7 @@ void WrongAnimal::setType(std::string value)
     this->type = value;
 }
 
-void WrongAnimal::makeSound()
+void WrongAnimal::makeSound() const
 {
     std::cout << "WrongAnimal makes a sound" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 21:05:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:17:34 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 22:20:50 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void WrongCat::setType(std::string value)
     this->type = value;
 }
 
-void WrongCat::makeSound()
+void WrongCat::makeSound() const
 {
     std::cout << "WrongCat makes a sound" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 21:07:13 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:17:01 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 22:24:32 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ class WrongAnimal
         //destructor
         ~WrongAnimal();
         //getters
-        std::string getType();
+        std::string getType() const;
         //setters
         void setType(std::string value);
         //member functions
-        void makeSound();
+        void makeSound() const;
 };
 
 #endif
