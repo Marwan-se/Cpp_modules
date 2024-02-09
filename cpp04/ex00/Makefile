@@ -1,8 +1,8 @@
-NAME = 
+NAME = Animals
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = 
-SRC = 
+INC = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+SRC = Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
