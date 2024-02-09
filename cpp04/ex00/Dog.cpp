@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:54 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/08 19:27:37 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/09 21:52:42 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ std::string Dog::getType()
 void Dog::setType(std::string value)
 {
     this->type = value;
+}
+
+void Dog::makeSound() const
+{
+    std::cout << "wouf wouf negus" << std::endl;
 }
