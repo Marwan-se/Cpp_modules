@@ -6,17 +6,26 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 21:52:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:48:50 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 Cat::Cat()
 {
     std::cout << "Cat default constructor called" << std::endl;
     this->type = "Cat";
 }
+
+Cat::~Cat()
+{
+    std::cout << "Cat destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 Cat::Cat(const Cat &copy)
 {
@@ -31,15 +40,7 @@ Cat &Cat::operator=(const Cat &rhs)
     return (*this);
 }
 
-Cat::~Cat()
-{
-    std::cout << "Cat destructor called" << std::endl;
-}
-
-std::string Cat::getType()
-{
-    return (this->type);
-}
+/*----------------------------- Member Functions --------------------------*/
 
 void Cat::setType(std::string value)
 {
