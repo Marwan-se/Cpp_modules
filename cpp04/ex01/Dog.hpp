@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:56 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 21:46:12 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 00:16:25 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class   Dog : public Animal
 {
+    private:
+        Brain *brain;
     public:
         //default constructor
         Dog();

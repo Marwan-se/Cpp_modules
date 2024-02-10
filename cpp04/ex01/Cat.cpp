@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 21:52:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 01:32:34 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ Cat::Cat()
 {
     std::cout << "Cat default constructor called" << std::endl;
     this->type = "Cat";
+    this->brain = new Brain();
 }
 
 Cat::Cat(const Cat &copy)
@@ -34,6 +35,7 @@ Cat &Cat::operator=(const Cat &rhs)
 Cat::~Cat()
 {
     std::cout << "Cat destructor called" << std::endl;
+    delete this->brain;
 }
 
 std::string Cat::getType()
