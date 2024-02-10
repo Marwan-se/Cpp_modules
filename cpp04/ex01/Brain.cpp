@@ -6,11 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:30:38 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 14:24:25 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:54:00 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 Brain::Brain()
 {
@@ -22,6 +24,13 @@ Brain::Brain()
         i++;
     }
 }
+
+Brain::~Brain()
+{
+    std::cout << "Brain destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 Brain::Brain(const Brain &copy)
 {
@@ -46,10 +55,7 @@ Brain &Brain::operator=(const Brain &rhs)
     return *this;
 }
 
-Brain::~Brain()
-{
-    std::cout << "Brain destructor called" << std::endl;
-}
+/*----------------------------- Member Functions --------------------------*/
 
 std::string Brain::getIdea(int index) const
 {
