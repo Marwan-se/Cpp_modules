@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 17:30:39 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 23:42:48 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Cat::~Cat()
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
-Cat::Cat(const Cat &copy)
+Cat::Cat(const Cat &copy) : Animal(copy)
 {
     std::cout << "Cat copy constructor called" << std::endl;
     this->type = copy.type;

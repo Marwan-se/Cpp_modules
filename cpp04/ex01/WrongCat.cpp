@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 21:05:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:51:06 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 23:42:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ WrongCat::~WrongCat()
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
-WrongCat::WrongCat(const WrongCat &copy)
+WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal(copy)
 {
     std::cout << "WrongCat copy constructor called" << std::endl;
     *this = copy;
