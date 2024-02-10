@@ -6,11 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:54 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 15:40:15 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:55:35 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 Dog::Dog()
 {
@@ -18,6 +20,14 @@ Dog::Dog()
     this->type = "Dog";
     this->brain = new Brain();
 }
+
+Dog::~Dog()
+{
+    std::cout << "Dog destructor called" << std::endl;
+    delete this->brain;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 Dog::Dog(const Dog &copy)
 {
@@ -34,11 +44,7 @@ Dog &Dog::operator=(const Dog &rhs)
     return *this;
 }
 
-Dog::~Dog()
-{
-    std::cout << "Dog destructor called" << std::endl;
-    delete this->brain;
-}
+/*----------------------------- Member Functions --------------------------*/
 
 std::string Dog::getType()
 {
