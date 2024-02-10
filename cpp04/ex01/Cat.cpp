@@ -6,11 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 15:39:45 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:54:50 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 Cat::Cat()
 {
@@ -18,6 +20,14 @@ Cat::Cat()
     this->type = "Cat";
     this->brain = new Brain();
 }
+
+Cat::~Cat()
+{
+    std::cout << "Cat destructor called" << std::endl;
+    delete this->brain;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 Cat::Cat(const Cat &copy)
 {
@@ -34,11 +44,7 @@ Cat &Cat::operator=(const Cat &rhs)
     return *this;
 }
 
-Cat::~Cat()
-{
-    std::cout << "Cat destructor called" << std::endl;
-    delete this->brain;
-}
+/*----------------------------- Member Functions --------------------------*/
 
 std::string Cat::getType()
 {
