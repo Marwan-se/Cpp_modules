@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:54 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:55:35 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 17:25:05 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ Dog::Dog()
 
 Dog::~Dog()
 {
+    delete brain;
     std::cout << "Dog destructor called" << std::endl;
-    delete this->brain;
 }
 
 /*-------------------------- Copy && Assignation --------------------------*/

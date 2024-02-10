@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:55:12 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 17:23:57 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class   Cat : public Animal
         //assignment operator
         Cat &operator=(const Cat &rhs);
         //destructor
-        virtual ~Cat();
+        ~Cat();
     /*---------------------------------------------------------------------*/
 
     /*----------------------------- Member Functions -----------------------*/

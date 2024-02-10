@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:54:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 17:30:39 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ Cat::Cat()
 
 Cat::~Cat()
 {
+    delete brain;
     std::cout << "Cat destructor called" << std::endl;
-    delete this->brain;
 }
 
 /*-------------------------- Copy && Assignation --------------------------*/

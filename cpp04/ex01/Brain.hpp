@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:30:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:54:24 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 17:21:20 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class   Brain
 {
-    private:
-        std::string ideas[100];
     public:
 
     /*---------------------- Orthodox Canonical Form ----------------------*/
@@ -41,6 +39,7 @@ class   Brain
         //member functions
         void printIdeas() const;
     /*---------------------------------------------------------------------*/
+        std::string ideas[100];
 };
 
 #endif

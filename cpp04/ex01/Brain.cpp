@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:30:38 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:54:00 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 17:22:25 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Brain::Brain()
     int i = 0;
     while (i < 100)
     {
-        this->ideas[i] = "brain";
+        ideas[i] = "brain";
         i++;
     }
 }
@@ -38,7 +38,7 @@ Brain::Brain(const Brain &copy)
     int i = 0;
     while (i < 100)
     {
-        this->ideas[i] = copy.ideas[i];
+        ideas[i] = copy.ideas[i];
         i++;
     }
 }
@@ -49,7 +49,7 @@ Brain &Brain::operator=(const Brain &rhs)
     int i = 0;
     while (i < 100)
     {
-        this->ideas[i] = rhs.ideas[i];
+        ideas[i] = rhs.ideas[i];
         i++;
     }
     return *this;
