@@ -6,15 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 21:03:55 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 14:25:38 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:48:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include <cstdlib>
-
 
 int main()
 {

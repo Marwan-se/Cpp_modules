@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 01:32:34 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:39:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,16 @@ Cat::Cat()
 Cat::Cat(const Cat &copy)
 {
     std::cout << "Cat copy constructor called" << std::endl;
-    *this = copy;
+    this->type = copy.type;
+    this->brain = new Brain(*copy.brain);
 }
 
 Cat &Cat::operator=(const Cat &rhs)
 {
     std::cout << "Cat assignation operator called" << std::endl;
     this->type = rhs.type;
-    return (*this);
+    *this->brain = *rhs.brain;
+    return *this;
 }
 
 Cat::~Cat()

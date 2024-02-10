@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:56 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 00:16:25 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 15:46:58 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class   Dog : public Animal
     public:
         //default constructor
         Dog();
+        //parameterized constructor
+        Dog(std::string value);
         //copy constructor
         Dog(const Dog &copy);
         //assignment operator
