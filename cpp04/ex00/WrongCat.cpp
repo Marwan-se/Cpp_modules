@@ -6,17 +6,26 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 21:05:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:20:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:51:06 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 WrongCat::WrongCat()
 {
     std::cout << "WrongCat default constructor called" << std::endl;
     this->type = "Wrong cat";
 }
+
+WrongCat::~WrongCat()
+{
+    std::cout << "WrongCat destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 WrongCat::WrongCat(const WrongCat &copy)
 {
@@ -31,10 +40,7 @@ WrongCat &WrongCat::operator=(const WrongCat &rhs)
     return (*this);
 }
 
-WrongCat::~WrongCat()
-{
-    std::cout << "WrongCat destructor called" << std::endl;
-}
+/*----------------------------- Member Functions --------------------------*/
 
 std::string WrongCat::getType()
 {

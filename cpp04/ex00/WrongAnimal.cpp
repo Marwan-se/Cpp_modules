@@ -6,17 +6,26 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:12:03 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 22:24:37 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:50:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 WrongAnimal::WrongAnimal()
 {
     std::cout << "WrongAnimal default constructor called" << std::endl;
     this->type = "wrong animal";
 }
+
+WrongAnimal::~WrongAnimal()
+{
+    std::cout << "WrongAnimal destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
@@ -31,10 +40,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
     return (*this);
 }
 
-WrongAnimal::~WrongAnimal()
-{
-    std::cout << "WrongAnimal destructor called" << std::endl;
-}
+/*----------------------------- Member Functions --------------------------*/
 
 std::string WrongAnimal::getType() const
 {

@@ -6,17 +6,26 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:54 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 21:52:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:49:50 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 Dog::Dog()
 {
     std::cout << "Dog default constructor called" << std::endl;
     this->type = "Dog";
 }
+
+Dog::~Dog()
+{
+    std::cout << "Dog destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 Dog::Dog(const Dog &copy)
 {
@@ -31,15 +40,7 @@ Dog &Dog::operator=(const Dog &rhs)
     return (*this);
 }
 
-Dog::~Dog()
-{
-    std::cout << "Dog destructor called" << std::endl;
-}
-
-std::string Dog::getType()
-{
-    return (this->type);
-}
+/*----------------------------- Member Functions --------------------------*/
 
 void Dog::setType(std::string value)
 {
