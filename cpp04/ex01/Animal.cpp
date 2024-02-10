@@ -6,17 +6,26 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:12:47 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/08 21:10:36 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:52:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+
+/*---------------------- Constructors & Destructors -----------------------*/
 
 Animal::Animal()
 {
     std::cout << "Animal default constructor called" << std::endl;
     this->type = "ANIMALS";
 }
+
+Animal::~Animal()
+{
+    std::cout << "Animal destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
 
 Animal::Animal(const Animal &copy)
 {
@@ -31,10 +40,7 @@ Animal &Animal::operator=(const Animal &rhs)
     return (*this);
 }
 
-Animal::~Animal()
-{
-    std::cout << "Animal destructor called" << std::endl;
-}
+/*----------------------------- Member Functions --------------------------*/
 
 std::string Animal::getType() const
 {
