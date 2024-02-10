@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:26:23 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:44:00 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 class   Cat : public Animal
 {
     public:
+    
+    /*---------------------- Orthodox Canonical Form ----------------------*/
         //default constructor
         Cat();
         //copy constructor
@@ -26,11 +28,14 @@ class   Cat : public Animal
         Cat &operator=(const Cat &rhs);
         //destructor
         ~Cat();
+    /*---------------------------------------------------------------------*/
 
+    /*----------------------------- Member Functions -----------------------*/
         //setters
         void setType(std::string value);
         //member functions
         void makeSound() const;
+    /*---------------------------------------------------------------------*/
 };
 
 #endif
