@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:54 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:49:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 23:43:40 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Dog::~Dog()
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
-Dog::Dog(const Dog &copy)
+Dog::Dog(const Dog &copy) : Animal(copy)
 {
     std::cout << "Dog copy constructor called" << std::endl;
     *this = copy;

@@ -27,7 +27,7 @@ Cat::~Cat()
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
-Cat::Cat(const Cat &copy)
+Cat::Cat(const Cat &copy) : Animal(copy)
 {
     std::cout << "Cat copy constructor called" << std::endl;
     *this = copy;
