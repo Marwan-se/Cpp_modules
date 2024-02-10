@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:12:28 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 17:35:06 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 23:31:13 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class   Animal
         //setters
         void setType(std::string value);
         //member function
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
     /*---------------------------------------------------------------------*/
 };
 

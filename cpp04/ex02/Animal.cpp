@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:12:47 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 18:42:09 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 23:31:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,4 @@ std::string Animal::getType() const
 void Animal::setType(std::string value)
 {
     this->type = value;
-}
-
-void Animal::makeSound() const
-{
-    std::cout << "Animal makes a sound" << std::endl;
 }
