@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:52 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/09 21:46:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 16:26:23 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ class   Cat : public Animal
         //assignment operator
         Cat &operator=(const Cat &rhs);
         //destructor
-        virtual ~Cat();
-        //getters
-        std::string getType();
+        ~Cat();
+
         //setters
         void setType(std::string value);
         //member functions
