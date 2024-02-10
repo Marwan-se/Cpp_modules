@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:30:38 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 01:31:57 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 14:24:25 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Brain::Brain()
     int i = 0;
     while (i < 100)
     {
-        this->ideas[i] = "empty";
+        this->ideas[i] = "brain";
         i++;
     }
 }

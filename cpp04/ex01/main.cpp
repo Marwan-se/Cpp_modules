@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 21:03:55 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 01:32:20 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/10 14:25:38 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,9 @@
 #include "Cat.hpp"
 #include <cstdlib>
 
-void    leaks()
-{
-    system("leaks Animal");
-}
 
 int main()
 {
-    atexit(leaks);
     Brain a;
     Brain b;
 
