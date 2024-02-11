@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 11:55:32 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 22:28:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 23:47:33 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,9 @@
 #include "Cure.hpp"
 #include <cstdlib>
 
-void    f()
-{
-    system("leaks Sage");
-}
 
 int main()
 {
-    atexit(f);
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
