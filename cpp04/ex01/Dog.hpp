@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:56 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 17:23:52 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 12:37:12 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ class   Dog : public Animal
 
     /*----------------------------- Member Functions -----------------------*/
         //getters
-        std::string getType();
+        Brain *getBrain() const ;
         //setters
-        void setType(std::string value);
+        void setBrain(Brain *value);
         //member functions
         void makeSound() const;
     /*---------------------------------------------------------------------*/

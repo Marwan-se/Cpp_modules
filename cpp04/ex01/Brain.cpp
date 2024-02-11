@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 22:30:38 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 17:22:25 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 12:45:31 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,17 @@ std::string Brain::getIdea(int index) const
     return this->ideas[index];
 }
 
-void Brain::setIdea(int index, std::string value)
-{
-    this->ideas[index] = value;
-}
-
-void Brain::printIdeas() const
+void Brain::setIdea(std::string value)
 {
     int i = 0;
     while (i < 100)
     {
-        std::cout << "Idea " << i << ": " << this->ideas[i] << std::endl;
+        this->ideas[i] = value;
         i++;
     }
+}
+
+void Brain::printIdeas(int index) const
+{
+    std::cout << "Idea " << index << ": " << this->ideas[index] << std::endl;
 }
