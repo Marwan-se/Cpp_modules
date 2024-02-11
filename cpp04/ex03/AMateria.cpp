@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 12:05:08 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 12:06:24 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 19:19:02 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ AMateria::AMateria(const AMateria &copy)
 AMateria &AMateria::operator=(const AMateria &rhs)
 {
     std::cout << "AMateria assignation operator called" << std::endl;
+    if (this == &rhs)
+        return (*this);
     this->type = rhs.type;
     return (*this);
 }
@@ -56,4 +58,9 @@ void AMateria::use(ICharacter &target)
 {
     std::cout << "AMateria use function called" << std::endl;
     (void)target;
+}
+
+void AMateria::setType(std::string value)
+{
+    this->type = value;
 }

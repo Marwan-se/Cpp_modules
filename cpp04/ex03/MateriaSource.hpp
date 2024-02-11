@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 12:11:26 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 14:20:39 by msekhsou         ###   ########.fr       */
+/*   Created: 2024/02/11 19:06:04 by msekhsou          #+#    #+#             */
+/*   Updated: 2024/02/11 19:55:35 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 
-class Ice : public AMateria
+class MateriaSource : public IMateriaSource
 {
+	private:
+		AMateria *LearnedMateria[4];
 	public:
 	
 	/*---------------------- Orthodox Canonical Form ----------------------*/
 		//default constructor
-		Ice();
+		MateriaSource();
 		//copy constructor
-		Ice(const Ice &type);
+		MateriaSource(const MateriaSource &copy);
 		//assignment operator
-		Ice &operator=(const Ice &rhs);
+		MateriaSource &operator=(const MateriaSource &rhs);
 		//destructor
-		~Ice();
+		~MateriaSource();
 	/*---------------------------------------------------------------------*/
 
 	/*----------------------------- Member Functions -----------------------*/
 		//member function
-		AMateria* clone() const;
-		void use(ICharacter &target);
+		void learnMateria(AMateria* m);
+		AMateria* createMateria(std::string const & type);
 	/*---------------------------------------------------------------------*/
+
 };
 
 #endif

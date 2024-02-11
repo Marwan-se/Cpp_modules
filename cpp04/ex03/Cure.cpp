@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 12:27:17 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 19:18:02 by msekhsou         ###   ########.fr       */
+/*   Created: 2024/02/11 14:18:26 by msekhsou          #+#    #+#             */
+/*   Updated: 2024/02/11 19:31:29 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
-#include "AMateria.hpp"
+#include "Cure.hpp"
 
 /*---------------------- Constructors & Destructors ----------------------*/
 
-Ice::Ice()
+Cure::Cure()
 {
-    std::cout << "Ice default constructor called" << std::endl;
-    this->type = "ice";
+    std::cout << "Cure default constructor called" << std::endl;
+    this->type = "cure";
 }
 
-Ice::~Ice()
+Cure::~Cure()
 {
-    std::cout << "Ice destructor called" << std::endl;
+    std::cout << "Cure destructor called" << std::endl;
 }
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
-Ice::Ice(const Ice &copy)
+Cure::Cure(const Cure &copy)
 {
-    std::cout << "Ice copy constructor called" << std::endl;
+    std::cout << "Cure copy constructor called" << std::endl;
     *this = copy;
 }
 
-Ice &Ice::operator=(const Ice &rhs)
+Cure &Cure::operator=(const Cure &rhs)
 {
-    std::cout << "Ice assignation operator called" << std::endl;
+    std::cout << "Cure assignation operator called" << std::endl;
     if (this == &rhs)
         return (*this);
     this->type = rhs.type;
@@ -45,12 +44,12 @@ Ice &Ice::operator=(const Ice &rhs)
 
 /*----------------------------- Member Functions --------------------------*/
 
-void Ice::use(ICharacter &target)
+AMateria *Cure::clone() const
 {
-    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+    return (new Cure(*this));
 }
 
-AMateria *Ice::clone() const
+void Cure::use(ICharacter &target)
 {
-    return (new Ice(*this));
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

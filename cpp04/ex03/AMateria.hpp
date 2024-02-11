@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 12:02:34 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 12:07:36 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 19:31:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 # define AMATERIA_HPP
 
 #include <iostream>
-#include <string>
 #include "ICharacter.hpp"
+#include <string>
 
+
+class ICharacter;
 class  AMateria
 {
     protected:
@@ -46,3 +48,5 @@ class  AMateria
         virtual void use(ICharacter &target);
     /*---------------------------------------------------------------------*/
 };
+
+#endif

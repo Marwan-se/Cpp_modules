@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 12:25:45 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 19:30:48 by msekhsou         ###   ########.fr       */
+/*   Created: 2024/02/11 14:23:06 by msekhsou          #+#    #+#             */
+/*   Updated: 2024/02/11 16:18:38 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-class Cure : public AMateria
+class Character : public ICharacter
 {
+    private:
+        std::string name;
+        AMateria *inventory[4];
     public:
-    
     /*---------------------- Orthodox Canonical Form ----------------------*/
         //default constructor
-        Cure();
+        Character();
+        //parameterized constructor
+        Character(std::string name);
         //copy constructor
-        Cure(const Cure &type);
+        Character(const Character &type);
         //assignment operator
-        Cure &operator=(const Cure &rhs);
+        Character &operator=(const Character &rhs);
         //destructor
-        ~Cure();
+        ~Character();
     /*---------------------------------------------------------------------*/
-
+    
     /*----------------------------- Member Functions -----------------------*/
         //member function
-        AMateria* clone() const;
-        void use(ICharacter &target);
         std::string const &getName() const;
+        void equip(AMateria* m);
+        void unequip(int idx);
+        void use(int idx, ICharacter& target);
     /*---------------------------------------------------------------------*/
 };
 
