@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 11:55:32 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 20:13:14 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 22:28:59 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,13 @@ int main()
     tmp = src->createMateria("cure");
     me->equip(tmp);
     ICharacter* Jett = new Character("Jett");
+    me->unequip(1);
     std::cout << std::endl;
     
     me->use(0, *Jett);
     me->use(1, *Jett);
+    me->use(2, *Jett);
+    me->use(3, *Jett);
 
     std::cout << std::endl;
     

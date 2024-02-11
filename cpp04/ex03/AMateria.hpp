@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 12:02:34 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 19:31:45 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 21:00:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class  AMateria
     protected:
         std::string type;
     public:
-    
+
     /*---------------------- Orthodox Canonical Form ----------------------*/
         //default constructor
         AMateria();
@@ -37,7 +37,7 @@ class  AMateria
         //destructor
         virtual ~AMateria();
     /*---------------------------------------------------------------------*/
-        
+
     /*----------------------------- Member Functions -----------------------*/
         //getters
         std::string const &getType() const;

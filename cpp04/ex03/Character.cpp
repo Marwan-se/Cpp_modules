@@ -6,11 +6,12 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:09:11 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 20:11:41 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 22:39:28 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "MateriaSource.hpp"
 
 /*---------------------- Constructors & Destructors ----------------------*/
 
@@ -49,6 +50,8 @@ Character::Character(const Character &copy)
     this->name = copy.name;
     for (int i = 0; i < 4; i++)
     {
+        if (this->inventory[i])
+            delete this->inventory[i];
         if (copy.inventory[i])
             this->inventory[i] = copy.inventory[i]->clone();
         else
@@ -97,6 +100,8 @@ void Character::unequip(int index)
 {
     if (index < 0 || index > 3 || !this->inventory[index])
         return ;
+    MateriaSource tmp;
+    tmp.learnMateria(this->inventory[index]);
     this->inventory[index] = NULL;
 }
 
