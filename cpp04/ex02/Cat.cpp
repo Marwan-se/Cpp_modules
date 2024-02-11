@@ -6,11 +6,12 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 11:48:51 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 12:58:01 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 /*---------------------- Constructors & Destructors -----------------------*/
 
@@ -23,13 +24,14 @@ Cat::Cat()
 
 Cat::~Cat()
 {
-    delete brain;
+    if (this->brain)
+        delete brain;
     std::cout << "Cat destructor called" << std::endl;
 }
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy)
 {
     std::cout << "Cat copy constructor called" << std::endl;
     this->type = copy.type;
@@ -39,21 +41,25 @@ Cat::Cat(const Cat &copy) : Animal(copy)
 Cat &Cat::operator=(const Cat &rhs)
 {
     std::cout << "Cat assignation operator called" << std::endl;
+    if (this == &rhs)
+        return (*this);
+    if (this->brain)
+        delete this->brain;
+    this->brain = new Brain(*rhs.brain);
     this->type = rhs.type;
-    *this->brain = *rhs.brain;
     return *this;
 }
 
 /*----------------------------- Member Functions --------------------------*/
 
-std::string Cat::getType()
+Brain *Cat::getBrain() const
 {
-    return (this->type);
+    return (this->brain);
 }
 
-void Cat::setType(std::string value)
+void Cat::setBrain(Brain *value)
 {
-    this->type = value;
+    *this->brain = *value;
 }
 
 void Cat::makeSound() const
