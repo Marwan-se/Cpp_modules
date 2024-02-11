@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:14:49 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/10 16:48:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 11:49:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ void Cat::setType(std::string value)
 
 void Cat::makeSound() const
 {
-    std::cout << "meaw meaw negus" << std::endl;
+    std::cout << "meaw meaw" << std::endl;
 }
