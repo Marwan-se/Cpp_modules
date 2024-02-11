@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 11:55:32 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 20:03:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/11 20:13:14 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include <cstdlib>
+
+void    f()
+{
+    system("leaks Sage");
+}
 
 int main()
 {
+    atexit(f);
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
@@ -29,7 +36,6 @@ int main()
     tmp = src->createMateria("cure");
     me->equip(tmp);
     ICharacter* Jett = new Character("Jett");
-
     std::cout << std::endl;
     
     me->use(0, *Jett);
