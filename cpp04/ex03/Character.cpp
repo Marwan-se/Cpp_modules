@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:09:11 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/11 22:39:28 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/12 17:32:24 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ Character::Character(const Character &copy)
 {
     std::cout << "Character copy constructor called" << std::endl;
     this->name = copy.name;
+    for (int i = 0; i < 4; i++)
+        this->inventory[i] = NULL;
     for (int i = 0; i < 4; i++)
     {
         if (this->inventory[i])
