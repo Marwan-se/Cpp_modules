@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:37:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/14 22:46:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/14 22:47:41 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ class Bureaucrat
         };
     /*---------------------------------------------------------------------*/
 };
+
+std::ostream &operator<<(std::ostream &out, Bureaucrat const &src);
 
 #endif
