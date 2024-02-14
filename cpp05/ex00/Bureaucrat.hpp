@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:37:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/13 17:55:04 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/14 22:23:35 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ class Bureaucrat
         Bureaucrat &operator=(Bureaucrat const &src);
     /*---------------------------------------------------------------------*/
 
-    /*---------------------- Member Function ----------------------*/
+    /*-------------------------- Member Function --------------------------*/
         std::string const &getName() const;
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+    /*---------------------------------------------------------------------*/
 };
 
 #endif
