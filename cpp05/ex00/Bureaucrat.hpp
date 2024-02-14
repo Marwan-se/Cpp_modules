@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:37:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/14 22:23:35 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/14 22:45:47 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,19 @@ class Bureaucrat
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+    /*---------------------------------------------------------------------*/
+    
+    /*-------------------------- Nested Class -----------------------------*/
+        class GradeTooHighException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
+        class GradeTooLowException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
     /*---------------------------------------------------------------------*/
 };
 
