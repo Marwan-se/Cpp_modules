@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 22:00:07 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 22:00:19 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,9 @@ void Bureaucrat::decrementGrade()
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
     return ("Grade is too high");
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return ("Grade is too low");
 }
