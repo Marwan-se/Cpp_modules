@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 21:54:41 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 21:57:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,11 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade)
     this->grade = grade;
     this->name = name;
 }
+
+Bureaucrat::~Bureaucrat()
+{
+    std::cout << "Bureaucrat destructor called" << std::endl;
+}
+
+/*-------------------------- Copy && Assignation --------------------------*/
+
