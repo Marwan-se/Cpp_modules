@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 21:57:56 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 21:58:03 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,8 @@ Bureaucrat::~Bureaucrat()
 
 /*-------------------------- Copy && Assignation --------------------------*/
 
+Bureaucrat::Bureaucrat(const Bureaucrat &copy)
+{
+    std::cout << "Bureaucrat copy constructor called" << std::endl;
+    *this = copy;
+}
