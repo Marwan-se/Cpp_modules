@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 21:58:44 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 21:58:51 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,9 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 std::string const &Bureaucrat::getName() const
 {
     return (this->name);
+}
+
+int Bureaucrat::getGrade() const
+{
+    return (this->grade);
 }
