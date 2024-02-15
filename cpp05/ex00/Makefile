@@ -1,8 +1,8 @@
 NAME = BureauCrat
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = BureauCrat.hpp
-SRC = BureauCrat.cpp main.cpp
+INC = Bureaucrat.hpp
+SRC = Bureaucrat.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

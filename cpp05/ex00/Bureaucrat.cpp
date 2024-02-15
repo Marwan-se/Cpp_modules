@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 22:00:37 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 22:03:16 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 Bureaucrat::Bureaucrat()
 {
     std::cout << "Bureaucrat default constructor called" << std::endl;
-    name = "Default";
     grade = 150;
+    name = "Default";
 }
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade)
