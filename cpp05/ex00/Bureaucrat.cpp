@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 21:58:51 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 21:59:01 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,11 @@ std::string const &Bureaucrat::getName() const
 int Bureaucrat::getGrade() const
 {
     return (this->grade);
+}
+
+void Bureaucrat::incrementGrade()
+{
+    if (grade - 1 < 1)
+        throw Bureaucrat::GradeTooHighException();
+    grade--;
 }
