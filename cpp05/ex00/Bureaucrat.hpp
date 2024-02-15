@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:37:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 20:40:09 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 20:52:36 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Bureaucrat
         void incrementGrade();
         void decrementGrade();
     /*---------------------------------------------------------------------*/
-    
+
 };
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &src);
