@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/15 21:59:42 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/15 22:00:07 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,11 @@ void Bureaucrat::decrementGrade()
     if (grade + 1 > 150)
         throw Bureaucrat::GradeTooLowException();
     grade++;
+}
+
+/*-------------------------- Nested Class Functions -----------------------*/
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return ("Grade is too high");
 }
