@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:37:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/16 16:19:26 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/16 17:15:28 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+#include <ostream>
 # include <string>
 #include <exception>
 
@@ -26,6 +27,7 @@ class Bureaucrat
 	/*----------------------- Orthodox Canonical Form -----------------------*/
 		Bureaucrat();
 		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat(std::string const &name, int grade);
 		Bureaucrat &operator=(const Bureaucrat &rhs);
 		~Bureaucrat();
 	/*----------------------------------------------------------------------*/
@@ -51,5 +53,6 @@ class Bureaucrat
 	/*----------------------------------------------------------------------*/
 };
 
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &value);
 
 #endif
