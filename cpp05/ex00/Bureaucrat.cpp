@@ -6,81 +6,78 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/16 18:11:34 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/17 01:02:54 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include <ostream>
-#include <string>
 
 /*------------------------ Constructors and Destructors ---------------------*/
 
-Bureaucrat::Bureaucrat() : name("default")
+Bureaucrat::Bureaucrat() : name("Default")
 {
-    std::cout << "Bureaucrat constructor called" << std::endl;
-    this->grade = 150;
+    std::cout << "Default constructor called" << std::endl;
+    grade = 150;
 }
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name)
 {
-    std::cout << "parameterized Bureaucrat constructor called" << std::endl;
-    this->grade = grade;
+    std::cout << "Parametric constructor called" << std::endl;
     if (grade < 1)
         throw Bureaucrat::GradeTooHighException();
-    if (grade > 150)
+    else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
+    this->grade = grade;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << std::endl;
+    std::cout << "Destructor called" << std::endl;
 }
 
-/*----------------------- Copy constructor and Assignation ------------------*/
+/*-------------------------- Copy & assignement -------------------------*/
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy) : name(copy.name)
 {
-    std::cout << "Bureaucrat copy constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
     *this = copy;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
-    std::cout << "Bureaucrat assignation operator called" << std::endl;
-    if (this == &rhs)
-        return *this;
-    this->grade = rhs.grade;
+    std::cout << "Assignement operator called" << std::endl;
+    if (this != &rhs)
+        this->grade = rhs.grade;
     return *this;
 }
 
-/*-------------------------- Member Functions --------------------------------*/
+/*-------------------------- Member Functions -------------------------*/
 
 std::string Bureaucrat::getName() const
 {
-    return this->name;
+    return name;
 }
 
 int Bureaucrat::getGrade() const
 {
-    return this->grade;
+    return grade;
 }
 
-void    Bureaucrat::IncrementGrade()
+void Bureaucrat::IncrementGrade()
 {
-    if (this->grade - 1 < 1)
+    if (grade - 1 < 1)
         throw Bureaucrat::GradeTooHighException();
-    this->grade--;
+    grade--;
 }
 
-void    Bureaucrat::DecrementGrade()
+void Bureaucrat::DecrementGrade()
 {
-    if (this->grade + 1 > 150)  
+    if (grade + 1 > 150)
         throw Bureaucrat::GradeTooLowException();
-    this->grade++;
+    grade++;
 }
 
-/*-------------------------- Nested Classes ---------------------------------*/
+/*-------------------------- Nested Classes -------------------------*/
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
@@ -92,10 +89,11 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
     return "Grade is too low";
 }
 
-/*-------------------------- Operator Overloading ----------------------------*/
+/*-------------------------- Non-member Functions -------------------------*/
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &value)
 {
-    out << value.getName() << ", bureaucrat grade " << value.getGrade() << std::endl;
+    out << value.getName() << ", bureaucrat grade " << value.getGrade();
     return out;
 }
+    
