@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/17 01:02:54 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/17 22:38:01 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 
 Bureaucrat::Bureaucrat() : name("Default")
 {
-    std::cout << "Default constructor called" << std::endl;
+    // std::cout << "Default constructor called" << std::endl;
     grade = 150;
 }
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name)
 {
-    std::cout << "Parametric constructor called" << std::endl;
+    // std::cout << "Parametric constructor called" << std::endl;
     if (grade < 1)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
@@ -65,16 +65,16 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::IncrementGrade()
 {
-    if (grade - 1 < 1)
-        throw Bureaucrat::GradeTooHighException();
     grade--;
+    if (grade < 1)
+        throw Bureaucrat::GradeTooHighException();
 }
 
 void Bureaucrat::DecrementGrade()
 {
-    if (grade + 1 > 150)
-        throw Bureaucrat::GradeTooLowException();
     grade++;
+    if (grade > 150)
+        throw Bureaucrat::GradeTooLowException();
 }
 
 /*-------------------------- Nested Classes -------------------------*/
