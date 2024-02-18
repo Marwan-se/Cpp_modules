@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/17 01:02:54 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/18 21:39:49 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Bureaucrat::Bureaucrat() : name("Default")
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name)
 {
-    std::cout << "Parametric constructor called" << std::endl;
+    // std::cout << "Parametric constructor called" << std::endl;
     if (grade < 1)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
@@ -65,18 +65,30 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::IncrementGrade()
 {
+    grade--;
     if (grade - 1 < 1)
         throw Bureaucrat::GradeTooHighException();
-    grade--;
 }
 
 void Bureaucrat::DecrementGrade()
 {
+    grade++;
     if (grade + 1 > 150)
         throw Bureaucrat::GradeTooLowException();
-    grade++;
 }
 
+void    Bureaucrat::signForm(Form &form)
+{
+    if (form.getSign())
+        std::cout << *this << " cannot sign " << form << " because it's already signed" << std::endl;
+    else if (grade <= form.getGradeToSign())
+    {
+        form.beSigned(*this);
+        std::cout << *this << " signs " << form << std::endl;
+    }
+    else
+        std::cout << *this << " cannot sign " << form << " because grade is too low" << std::endl;
+}
 /*-------------------------- Nested Classes -------------------------*/
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
@@ -96,4 +108,3 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &value)
     out << value.getName() << ", bureaucrat grade " << value.getGrade();
     return out;
 }
-    
