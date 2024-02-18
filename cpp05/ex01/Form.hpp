@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 01:34:44 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/18 21:47:53 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/18 21:48:02 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ class Form
 		void		beSigned(Bureaucrat &bureaucrat);
 	/*----------------------------------------------------------------------*/
 
-	public:
 	/*--------------------------- Nested Classes ---------------------------*/
 		class GradeTooHighException : public std::exception
 		{
