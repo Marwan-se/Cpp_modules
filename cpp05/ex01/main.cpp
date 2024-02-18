@@ -6,12 +6,12 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:34:33 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/18 21:47:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/18 21:47:32 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include <cstdio>
+
 
 int main()
 {
