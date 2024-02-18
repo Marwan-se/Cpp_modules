@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 01:34:44 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/18 21:48:21 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/18 21:48:33 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Form
 		bool sign;
 		int const gradeToSign;
 		int const gradeToExecute;
-
+	public:
 	/*----------------------- Orthodox Canonical Form -----------------------*/
 		Form();
 		Form(const Form &copy);
