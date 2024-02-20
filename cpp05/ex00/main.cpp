@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:34:33 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/17 22:38:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/20 21:45:01 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,8 @@ int main()
     {
         Bureaucrat br2("person1", 150);
         std::cout << br2 << std::endl;
-        puts("pp");
 
         br2.DecrementGrade();
-        puts("pp");
         std::cout << br2 << std::endl;
 
         br2.DecrementGrade();
