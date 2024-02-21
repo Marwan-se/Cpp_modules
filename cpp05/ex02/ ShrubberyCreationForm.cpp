@@ -31,6 +31,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &exec) const
 	AForm::execute(exec);
 	std::ofstream file;
 	file.open(this->target + "_shrubbery");
+
 	std::cout << "            #### ####" << std::endl;
     std::cout << "        ### \\/#|### |/####" << std::endl;
     std::cout << "       ##\\/#/ \\||/##/_/##/_#" << std::endl;
@@ -46,6 +47,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &exec) const
     std::cout << "              `}" << std::endl;
     std::cout << "               {" << std::endl;
 	std::endl;
+
 	std::cout << "File " << this->target << "_shrubbery created." << std::endl;
 	file.close();
 }
