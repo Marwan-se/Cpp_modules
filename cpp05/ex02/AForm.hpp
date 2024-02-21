@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Aform.hpp                                          :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:00:06 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/18 22:01:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/21 16:53:43 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class AForm
 		int			getGradeToSign() const;
 		int			getGradeToExecute() const;
 		void		beSigned(Bureaucrat &bureaucrat);
+		visual execute(Bureaucrat const &executor) const = 0;
 	/*----------------------------------------------------------------------*/
 
 	/*--------------------------- Nested Classes ---------------------------*/
