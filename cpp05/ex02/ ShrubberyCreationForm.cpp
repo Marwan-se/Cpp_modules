@@ -1,4 +1,16 @@
-#include "ShrubberyCreationForm.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*    ShrubberyCreationForm.cpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/22 17:36:56 by msekhsou          #+#    #+#             */
+/*   Updated: 2024/02/22 18:15:37 by msekhsou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include " ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137)
 {
@@ -29,7 +41,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 void	ShrubberyCreationForm::execute(Bureaucrat const &exec) const
 {
 	AForm::execute(exec);
-	std::ofstream file;
+    std::ofstream file;
 	file.open(this->target + "_shrubbery");
 
 	std::cout << "            #### ####" << std::endl;
@@ -46,7 +58,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &exec) const
     std::cout << "        , -=-~{ .-^- _" << std::endl;
     std::cout << "              `}" << std::endl;
     std::cout << "               {" << std::endl;
-	std::endl;
+    std::cout << "\n";
 
 	std::cout << "File " << this->target << "_shrubbery created." << std::endl;
 	file.close();
