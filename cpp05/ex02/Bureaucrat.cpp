@@ -6,11 +6,12 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 17:34:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/22 22:00:12 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 /*------------------------ Constructors and Destructors ---------------------*/
 
@@ -77,11 +78,9 @@ void Bureaucrat::DecrementGrade()
         throw Bureaucrat::GradeTooLowException();
 }
 
-void    Bureaucrat::signForm(AForm &form)
+void Bureaucrat::signForm(AForm &form)
 {
-    if (form.getSign())
-        std::cout << *this << " cannot sign " << form << " because it's already signed" << std::endl;
-    else if (grade <= form.getGradeToSign())
+    if (grade <= form.getGradeToSign())
     {
         form.beSigned(*this);
         std::cout << *this << " signs " << form << std::endl;

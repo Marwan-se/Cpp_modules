@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ShrubberyCreationForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:03:08 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 18:10:48 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 00:01:35 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 # include <fstream>
 # include "AForm.hpp"
+
 
 class ShrubberyCreationForm : public AForm
 {
@@ -32,7 +33,7 @@ class ShrubberyCreationForm : public AForm
     /*----------------------------------------------------------------------*/
 
     /*----------------------------- Member Functions -----------------------*/
-        void		execute(Bureaucrat const &executor) const;
+		void	execute(Bureaucrat const &executor) const;
     /*----------------------------------------------------------------------*/
 
     /*--------------------------- Nested Classes ---------------------------*/

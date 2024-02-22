@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:16:34 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 18:16:35 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 00:24:43 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const &exec) const
+void RobotomyRequestForm::execute(Bureaucrat const &execute) const
 {
-	AForm::execute(exec);
+	(void)execute;
 	std::cout << "drilling noises..." << std::endl;
 	std::cout << "Vzzzzzzzzzzzzzz" << std::endl;
 	std::cout << "Vzzzzzzzzzz Vzzzzzzzzzz" << std::endl;

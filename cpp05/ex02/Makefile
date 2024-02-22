@@ -1,8 +1,8 @@
 NAME = BureauCrat
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp Bureaucrat.hpp AForm.hpp
-SRC = ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Bureaucrat.cpp AForm.cpp main.cpp
+INC = Bureaucrat.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp AForm.hpp
+SRC = main.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp AForm.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

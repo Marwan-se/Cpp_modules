@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ShrubberyCreationForm.cpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:56 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 18:15:37 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 00:32:11 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include " ShrubberyCreationForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137)
 {
@@ -38,28 +38,30 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-void	ShrubberyCreationForm::execute(Bureaucrat const &exec) const
+void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 {
-	AForm::execute(exec);
+    (void)executor;
     std::ofstream file;
 	file.open(this->target + "_shrubbery");
-
-	std::cout << "            #### ####" << std::endl;
-    std::cout << "        ### \\/#|### |/####" << std::endl;
-    std::cout << "       ##\\/#/ \\||/##/_/##/_#" << std::endl;
-    std::cout << "     ###  \\/###|/ \\/ # ###" << std::endl;
-    std::cout << "   ##_\\_#\\_\\## | #/###_/_####" << std::endl;
-    std::cout << "  ## #### # \\ #| /  #### ##/##" << std::endl;
-    std::cout << "   __#_--###`  |{,###---###-~" << std::endl;
-    std::cout << "             \\ }{" << std::endl;
-    std::cout << "              }}{" << std::endl;
-    std::cout << "              }}{" << std::endl;
-    std::cout << "         ejm  {{}" << std::endl;
-    std::cout << "        , -=-~{ .-^- _" << std::endl;
-    std::cout << "              `}" << std::endl;
-    std::cout << "               {" << std::endl;
-    std::cout << "\n";
+    if (!file.is_open())
+        std::cerr << "Error: could not open file." << std::endl;
+	file << "            #### ####" << std::endl;
+    file << "        ### \\/#|### |/####" << std::endl;
+    file << "       ##\\/#/ \\||/##/_/##/_#" << std::endl;
+    file << "     ###  \\/###|/ \\/ # ###" << std::endl;
+    file << "   ##_\\_#\\_\\## | #/###_/_####" << std::endl;
+    file << "  ## #### # \\ #| /  #### ##/##" << std::endl;
+    file << "   __#_--###`  |{,###---###-~" << std::endl;
+    file << "             \\ }{" << std::endl;
+    file << "              }}{" << std::endl;
+    file << "              }}{" << std::endl;
+    file << "         ejm  {{}" << std::endl;
+    file << "        ,-=-~{ .-^- _" << std::endl;
+    file << "             `{{}}" << std::endl;
+    file << "             {{{}}}" << std::endl;
+    file << "\n";
 
 	std::cout << "File " << this->target << "_shrubbery created." << std::endl;
 	file.close();
 }
+

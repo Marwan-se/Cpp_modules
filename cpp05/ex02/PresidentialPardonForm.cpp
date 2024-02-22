@@ -6,11 +6,11 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:16:23 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 18:16:24 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 00:24:36 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include " PresidentialPardonForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5)
 {
@@ -38,8 +38,8 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-void	PresidentialPardonForm::execute(Bureaucrat const &exec) const
+void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-    AForm::execute(exec);
-    std::cout << "this " << this->target << " has been pardoned by Zafod Beeblebrox." << std::endl;
+    (void)executor;
+    std::cout << this->target << " has been pardoned by Zafod Beeblebrox." << std::endl;
 }
