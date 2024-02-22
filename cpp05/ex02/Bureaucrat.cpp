@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/21 22:15:44 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:34:05 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void Bureaucrat::DecrementGrade()
         throw Bureaucrat::GradeTooLowException();
 }
 
-void    Bureaucrat::signForm(Form &form)
+void    Bureaucrat::signForm(AForm &form)
 {
     if (form.getSign())
         std::cout << *this << " cannot sign " << form << " because it's already signed" << std::endl;
@@ -90,7 +90,7 @@ void    Bureaucrat::signForm(Form &form)
         std::cout << *this << " cannot sign " << form << " because grade is too low" << std::endl;
 }
 
-void    Bureaucrat::executeForm(Form const &form)
+void    Bureaucrat::executeForm(AForm const &form)
 {
     if (form.getSign() == false)
         std::cout << *this << " cannot execute " << form << " because it's not signed" << std::endl;

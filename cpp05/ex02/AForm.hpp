@@ -6,12 +6,12 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:00:06 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/21 16:56:13 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:32:57 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include <iostream>
 # include <string>
@@ -36,12 +36,12 @@ class AForm
 	/*----------------------------------------------------------------------*/
 
 	/*----------------------------- Member Functions -----------------------*/
-		std::string getName() const;
-		bool		getSign() const;
-		int			getGradeToSign() const;
-		int			getGradeToExecute() const;
-		void		beSigned(Bureaucrat &bureaucrat);
-		visual 		execute(Bureaucrat const &executor) const = 0;
+		std::string 	getName() const;
+		bool			getSign() const;
+		int				getGradeToSign() const;
+		int				getGradeToExecute() const;
+		void			beSigned(Bureaucrat &bureaucrat);
+		virtual void	execute(Bureaucrat const &executor) const = 0;
 	/*----------------------------------------------------------------------*/
 
 	/*--------------------------- Nested Classes ---------------------------*/

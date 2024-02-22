@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:37:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/21 22:15:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:34:17 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <ostream>
 # include <string>
 #include <exception>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 class Form;
 class Bureaucrat
@@ -39,8 +39,8 @@ class Bureaucrat
 		int			getGrade() const;
 		void	IncrementGrade();
 		void	DecrementGrade();
-		void	signForm(Form &form);
-		void	executeForm(Form const &form);
+		void	signForm(AForm &form);
+		void	executeForm(AForm const &form);
 	/*----------------------------------------------------------------------*/
 
 	/*--------------------------- Nested Classes ---------------------------*/
