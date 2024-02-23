@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:43 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 23:01:00 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:25:42 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main()
 {
-    Bureaucrat bureaucrat("pp", 10);
+    Bureaucrat bureaucrat("walu", 10);
 
     try
     {
@@ -32,11 +32,13 @@ int main()
     {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
+    
+    Bureaucrat bureaucrat1("wahd", 10);
     try
     {
         RobotomyRequestForm robotomyForm("ohio");
 
-        bureaucrat.signForm(robotomyForm);
+        bureaucrat1.signForm(robotomyForm);
 
         robotomyForm.execute(bureaucrat);
     }
@@ -44,11 +46,13 @@ int main()
     {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
+
+    Bureaucrat bureaucrat2("juj", 10);
     try
     {
         PresidentialPardonForm presidentialForm("ohio");
 
-        bureaucrat.signForm(presidentialForm);
+        bureaucrat2.signForm(presidentialForm);
 
         presidentialForm.execute(bureaucrat);
     }

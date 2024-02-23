@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:00:06 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 00:12:14 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:22:52 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <cstdlib>
 # include "Bureaucrat.hpp"
 
 class Bureaucrat;
