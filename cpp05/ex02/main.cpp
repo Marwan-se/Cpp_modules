@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:43 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 01:59:33 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:01:00 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,34 @@ int main()
     try
     {
         ShrubberyCreationForm shrubberyForm("ohio");
-        RobotomyRequestForm robotomyForm("daft");
-        PresidentialPardonForm pardonForm("fromage");
 
         bureaucrat.signForm(shrubberyForm);
-        bureaucrat.signForm(robotomyForm);
-        bureaucrat.signForm(pardonForm);
 
         shrubberyForm.execute(bureaucrat);
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Exception caught: " << e.what() << std::endl;
+    }
+    try
+    {
+        RobotomyRequestForm robotomyForm("ohio");
+
+        bureaucrat.signForm(robotomyForm);
+
         robotomyForm.execute(bureaucrat);
-        pardonForm.execute(bureaucrat);
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Exception caught: " << e.what() << std::endl;
+    }
+    try
+    {
+        PresidentialPardonForm presidentialForm("ohio");
+
+        bureaucrat.signForm(presidentialForm);
+
+        presidentialForm.execute(bureaucrat);
     }
     catch (const std::exception& e)
     {
