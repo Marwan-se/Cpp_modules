@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 02:02:31 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 22:54:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 22:58:09 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,17 @@ const char *Intern::Formnf::what() const throw()
     return ("Form not found: 404");
 }
 
-AForm *Intern::makeForm(std::string const &formName, std::string const &target)
+AForm *Intern::makeForm(std::string const &form_name, std::string const &target)
 {
-    std::string formNames[3] = {"shrubbery creation", "presidential pardon", "robotomy request"};
-    AForm *(*formCreators[3])(std::string const &target) = {CreateShr, CreatePres, CreateRobot};
+    std::string form_name[3] = {"shrubbery creation", "presidential pardon", "robotomy request"};
+    AForm *(*forms[3])(std::string const &target) = {CreateShr, CreatePres, CreateRobot};
 
     for (int i = 0; i < 3; i++)
     {
-        if (formName == formNames[i])
+        if (formName == form_name[i])
         {
-            std::cout << "Intern creates " << formName << std::endl;
-            return (formCreators[i](target));
+            std::cout << "Intern creates " << form_name << std::endl;
+            return (forms[i](target));
         }
     }
     throw Intern::Formnf();
