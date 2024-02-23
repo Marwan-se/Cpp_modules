@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 02:02:35 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 19:36:30 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 22:50:57 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 #include <string>
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 
 class Intern
 {
@@ -34,7 +38,7 @@ class Intern
 		AForm *CreatePres(std::string const &target);
 		AForm *CreateRobot(std::string const &target);
 	/*--------------------------------------------------------------------------*/
-	
+
 	/*------------------------------- Exceptions ------------------------------*/
 		class Formnf : public std::exception
 		{
