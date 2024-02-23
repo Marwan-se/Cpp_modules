@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:43 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 23:57:24 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 01:59:33 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,26 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 
-int main() {
-    // Create a Bureaucrat
-    Bureaucrat bureaucrat("John", 120);
+int main()
+{
+    Bureaucrat bureaucrat("pp", 10);
 
-    try {
-        // Create different forms
-        ShrubberyCreationForm shrubberyForm("garden");
-        RobotomyRequestForm robotomyForm("RoboCop");
-        PresidentialPardonForm pardonForm("Alice");
+    try
+    {
+        ShrubberyCreationForm shrubberyForm("ohio");
+        RobotomyRequestForm robotomyForm("daft");
+        PresidentialPardonForm pardonForm("fromage");
 
-        // Try signing the forms with the bureaucrat
         bureaucrat.signForm(shrubberyForm);
         bureaucrat.signForm(robotomyForm);
         bureaucrat.signForm(pardonForm);
 
-        // Try executing the forms
         shrubberyForm.execute(bureaucrat);
         robotomyForm.execute(bureaucrat);
         pardonForm.execute(bureaucrat);
-    } catch (const std::exception& e) {
-        // Handle any exceptions that may occur
+    }
+    catch (const std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 
