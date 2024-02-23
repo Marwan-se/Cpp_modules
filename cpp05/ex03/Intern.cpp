@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 02:02:31 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 02:09:42 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 19:10:34 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,4 @@ Intern &Intern::operator=(const Intern &rhs)
 AForm *Intern::makeForm(std::string const &formName, std::string const &target)
 {
     
-    return (NULL);
 }
