@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:56 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 00:32:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:30:10 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,30 +38,34 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const
+void	ShrubberyCreationForm::execute(const Bureaucrat &) const
 {
-    (void)executor;
-    std::ofstream file;
-	file.open(this->target + "_shrubbery");
-    if (!file.is_open())
+    std::ofstream filename;
+    std::string file = this->target + "_shrubbery";
+    filename.open(file.c_str());
+    
+    if (!filename.is_open())
         std::cerr << "Error: could not open file." << std::endl;
-	file << "            #### ####" << std::endl;
-    file << "        ### \\/#|### |/####" << std::endl;
-    file << "       ##\\/#/ \\||/##/_/##/_#" << std::endl;
-    file << "     ###  \\/###|/ \\/ # ###" << std::endl;
-    file << "   ##_\\_#\\_\\## | #/###_/_####" << std::endl;
-    file << "  ## #### # \\ #| /  #### ##/##" << std::endl;
-    file << "   __#_--###`  |{,###---###-~" << std::endl;
-    file << "             \\ }{" << std::endl;
-    file << "              }}{" << std::endl;
-    file << "              }}{" << std::endl;
-    file << "         ejm  {{}" << std::endl;
-    file << "        ,-=-~{ .-^- _" << std::endl;
-    file << "             `{{}}" << std::endl;
-    file << "             {{{}}}" << std::endl;
-    file << "\n";
+    else
+    {
+        filename << "            #### ####" << std::endl;
+        filename << "        ### \\/#|### |/####" << std::endl;
+        filename << "       ##\\/#/ \\||/##/_/##/_#" << std::endl;
+        filename << "     ###  \\/###|/ \\/ # ###" << std::endl;
+        filename << "   ##_\\_#\\_\\## | #/###_/_####" << std::endl;
+        filename << "  ## #### # \\ #| /  #### ##/##" << std::endl;
+        filename << "   __#_--###`  |{,###---###-~" << std::endl;
+        filename << "             \\ }{" << std::endl;
+        filename << "              }}{" << std::endl;
+        filename << "              }}{" << std::endl;
+        filename << "         ejm  {{}" << std::endl;
+        filename << "        ,-=-~{ .-^- _" << std::endl;
+        filename << "             `{{}}" << std::endl;
+        filename << "             {{{}}}" << std::endl;
+        filename << "\n";
 
-	std::cout << "File " << this->target << "_shrubbery created." << std::endl;
-	file.close();
+        std::cout << "File " << this->target << "_shrubbery created." << std::endl;
+    }
+
+	filename.close();
 }
-
