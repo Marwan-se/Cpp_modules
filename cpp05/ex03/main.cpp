@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:43 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/24 16:08:08 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:22:06 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,18 @@
 #include "Intern.hpp"
 
 int main()
-{
-
-    Bureaucrat bureaucrat("walu", 10);
-    
+{    
     try
     {
         Intern someRandomIntern;
-        AForm* rrf;
-        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        AForm *rrf;
+        rrf = someRandomIntern.makeForm("ShrubberyCreationForm", "Bender");
+        std::cout << *rrf << std::endl;
+
+        Bureaucrat b("Bender", 1);
+        b.signForm(*rrf);
+        b.executeForm(*rrf);
+        
     }
     catch (const std::exception& e)
     {
