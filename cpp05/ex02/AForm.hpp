@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:00:06 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 23:22:52 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:35:14 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ class AForm
 				virtual const char *what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
+		class FormNotSignedException : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();
