@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:43 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 23:30:31 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 16:08:08 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -23,11 +24,9 @@ int main()
     
     try
     {
-        ShrubberyCreationForm shrubberyForm("ohio");
-
-        bureaucrat.signForm(shrubberyForm);
-
-        shrubberyForm.execute(bureaucrat);
+        Intern someRandomIntern;
+        AForm* rrf;
+        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
     }
     catch (const std::exception& e)
     {

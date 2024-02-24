@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:36:59 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/22 22:00:12 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 18:53:39 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 Bureaucrat::Bureaucrat() : name("Default")
 {
-    std::cout << "Default constructor called" << std::endl;
+    // std::cout << "Default constructor called" << std::endl;
     grade = 150;
 }
 
@@ -33,20 +33,20 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name)
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Destructor called" << std::endl;
+    // std::cout << "Destructor called" << std::endl;
 }
 
 /*-------------------------- Copy & assignement -------------------------*/
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy) : name(copy.name)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    // std::cout << "Copy constructor called" << std::endl;
     *this = copy;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
-    std::cout << "Assignement operator called" << std::endl;
+    // std::cout << "Assignement operator called" << std::endl;
     if (this != &rhs)
         this->grade = rhs.grade;
     return *this;
@@ -78,28 +78,29 @@ void Bureaucrat::DecrementGrade()
         throw Bureaucrat::GradeTooLowException();
 }
 
-void Bureaucrat::signForm(AForm &form)
+void    Bureaucrat::signForm(AForm &form)
 {
-    if (grade <= form.getGradeToSign())
+    if (form.getSign())
+        std::cout << *this << " cannot sign " << form << " because it's already signed" << std::endl;
+    else
     {
         form.beSigned(*this);
-        std::cout << *this << " signs " << form << std::endl;
+        std::cout << getName() << " signs " << form << std::endl;
     }
-    else
-        std::cout << *this << " cannot sign " << form << " because grade is too low" << std::endl;
 }
 
 void    Bureaucrat::executeForm(AForm const &form)
 {
     if (form.getSign() == false)
-        std::cout << *this << " cannot execute " << form << " because it's not signed" << std::endl;
-    else if (grade <= form.getGradeToExecute())
+        throw AForm::FormNotSignedException();
+    else if (grade > form.getGradeToExecute())
+        throw AForm::GradeTooLowException();
+    else
     {
         form.execute(*this);
         std::cout << *this << " executes " << form << std::endl;
     }
-    else
-        std::cout << *this << " cannot execute " << form << " because grade is too low" << std::endl;
+        
 }
 
 /*-------------------------- Nested Classes -------------------------*/

@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:56 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 23:30:10 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:20:25 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,4 @@ void	ShrubberyCreationForm::execute(const Bureaucrat &) const
 
 	filename.close();
 }
+

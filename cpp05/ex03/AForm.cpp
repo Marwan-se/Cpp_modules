@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:00:32 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/23 00:11:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:35:29 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 AForm::AForm() : name("default"), gradeToSign(150), gradeToExecute(150)
 {
-    std::cout << "AForm Default Constructor called" << std::endl;
+    // std::cout << "AForm Default Constructor called" << std::endl;
     sign = false;
 }
 
@@ -33,20 +33,20 @@ AForm::AForm(std::string const &name, int gradeToSign, int gradeToExecute) : nam
 
 AForm::~AForm()
 {
-    std::cout << "AForm Destructor called" << std::endl;
+    // std::cout << "AForm Destructor called" << std::endl;
 }
 
 /*---------------------------- Copy & Assignation ----------------------------*/
 
 AForm::AForm(const AForm &copy) : name(copy.name), gradeToSign(copy.gradeToSign), gradeToExecute(copy.gradeToExecute)
 {
-    std::cout << "AForm Copy Constructor called" << std::endl;
+    // std::cout << "AForm Copy Constructor called" << std::endl;
     sign = copy.sign;
 }
 
 AForm &AForm::operator=(const AForm &rhs)
 {
-    std::cout << "AForm Assignation Operator called" << std::endl;
+    // std::cout << "AForm Assignation Operator called" << std::endl;
     if (this != &rhs)
         sign = rhs.sign;
     return *this;
@@ -91,6 +91,11 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
     return "AForm Exception: Grade is too low";
+}
+
+const char *AForm::FormNotSignedException::what() const throw()
+{
+    return "AForm Exception: Form is not signed";
 }
 
 std::ostream &operator<<(std::ostream &out, const AForm &form)
