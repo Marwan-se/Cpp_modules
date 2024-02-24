@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 17:36:43 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/24 19:12:02 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:34:30 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,9 @@
 #include "AForm.hpp"
 #include <cstdlib>
 
-void    leaks()
-{
-    system("leaks BureauCrat");
-}
 
 int main()
 {
-
-    atexit(leaks);
     AForm *shrubberyForm = new ShrubberyCreationForm("ohio");
 
     try
@@ -41,39 +35,39 @@ int main()
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 
-    AForm *robotomyForm = new RobotomyRequestForm("ohio");
+    // AForm *robotomyForm = new RobotomyRequestForm("ohio");
 
-    try
-    {
-        Bureaucrat bureaucrat1("wahd", 40);
+    // try
+    // {
+    //     Bureaucrat bureaucrat1("wahd", 40);
 
-        bureaucrat1.signForm(*robotomyForm);
+    //     bureaucrat1.signForm(*robotomyForm);
 
-        bureaucrat1.executeForm(*robotomyForm);
-    }
-    catch (const std::exception& e)
-    {
-        std::cout << "Exception caught: " << e.what() << std::endl;
-    }
+    //     bureaucrat1.executeForm(*robotomyForm);
+    // }
+    // catch (const std::exception& e)
+    // {
+    //     std::cout << "Exception caught: " << e.what() << std::endl;
+    // }
 
-    AForm *presidentialForm = new PresidentialPardonForm("ohio");
+    // AForm *presidentialForm = new PresidentialPardonForm("ohio");
 
-    try
-    {
-        Bureaucrat bureaucrat2("juj", 4);
+    // try
+    // {
+    //     Bureaucrat bureaucrat2("juj", 4);
 
-        bureaucrat2.signForm(*presidentialForm);
+    //     bureaucrat2.signForm(*presidentialForm);
 
-        bureaucrat2.executeForm(*presidentialForm);
-    }
-    catch (const std::exception& e)
-    {
-        std::cout << "Exception caught: " << e.what() << std::endl;
-    }
+    //     bureaucrat2.executeForm(*presidentialForm);
+    // }
+    // catch (const std::exception& e)
+    // {
+    //     std::cout << "Exception caught: " << e.what() << std::endl;
+    // }
     
     delete shrubberyForm;
-    delete robotomyForm;
-    delete presidentialForm;
+    // delete robotomyForm;
+    // delete presidentialForm;
 
     return 0;
 }
