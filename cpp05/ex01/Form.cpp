@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 01:34:41 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/18 21:37:14 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:29:48 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Form::Form(std::string const &name, int gradeToSign, int gradeToExecute) : name(
 
 Form::~Form()
 {
-    std::cout << "Form Destructor called" << std::endl;
+    // std::cout << "Form Destructor called" << std::endl;
 }
 
 /*---------------------------- Copy & Assignation ----------------------------*/
@@ -95,6 +95,6 @@ const char *Form::GradeTooLowException::what() const throw()
 
 std::ostream &operator<<(std::ostream &out, const Form &form)
 {
-    out << "Form: " << form.getName() << ", Sign: " << form.getSign() << ", Grade to sign: " << form.getGradeToSign() << ", Grade to execute: " << form.getGradeToExecute();
+    out << "Form: " << form.getName() << " | Grade to sign: " << form.getGradeToSign() << " | Grade to execute: " << form.getGradeToExecute() << " | Sign: " << form.getSign();
     return out;
-}
+} 
