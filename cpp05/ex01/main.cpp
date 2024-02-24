@@ -6,14 +6,13 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:34:33 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/24 17:28:51 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 21:35:52 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include <iostream>
 #include <ostream>
-
 
 int main()
 {

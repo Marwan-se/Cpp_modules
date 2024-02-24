@@ -1,4 +1,4 @@
-NAME = BureauCrat
+NAME = Form
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 INC = Bureaucrat.hpp Form.hpp
