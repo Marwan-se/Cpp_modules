@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 02:02:31 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/24 00:06:29 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/24 19:45:48 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,4 @@ AForm *Intern::makeForm(std::string const &formName, std::string const &target)
         }
     }
     throw Formnf();
-    return (NULL);
 }
