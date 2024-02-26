@@ -6,8 +6,9 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 02:50:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/26 02:50:14 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/26 02:50:19 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+
