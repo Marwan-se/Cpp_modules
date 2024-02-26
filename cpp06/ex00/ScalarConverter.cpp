@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 02:50:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/26 02:50:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:29:43 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,14 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &rhs)
         *this = rhs;
     return *this;
 }
+
+/*--------------------------------------------------------------------*/
+
+/*-------------------------- Member Functions -------------------------*/
+
+void ScalarConverter::convert(ahh)
+{
+    // Convert the string to char, int, float and double
+    
+}
+
