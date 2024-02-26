@@ -1,4 +1,4 @@
-NAME = ScalarConverter
+NAME = convert
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 INC = 
