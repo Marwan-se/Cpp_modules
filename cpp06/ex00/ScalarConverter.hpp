@@ -6,8 +6,9 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 02:43:37 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/26 02:43:48 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/26 02:43:58 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALARCONVERTER_HPP
+# define SCALARCONVERTER_HPP
