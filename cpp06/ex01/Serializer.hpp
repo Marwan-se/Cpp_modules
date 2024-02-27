@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 19:01:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/27 02:39:12 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/02/27 17:49:31 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ class Serializer
         static uintptr_t serialize(Data *ptr);
         static Data* deserialize(uintptr_t raw);
     /*--------------------------------------------------------------------------*/
+
+    /*------------------------------- Data ------------------------------------*/
+
+    typedef struct s_data
+    {
+        void *ptr;
+    } t_data;
 
 };
 
