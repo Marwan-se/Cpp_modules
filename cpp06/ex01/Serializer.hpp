@@ -15,7 +15,12 @@
 
 #include <iostream>
 #include <string>
-#include "Data.hpp"
+
+struct  Data
+{
+    int     value;
+}
+
 
 class Serializer
 {
@@ -31,13 +36,6 @@ class Serializer
     /*-------------------------- Member Functions -----------------------------*/
         static uintptr_t serialize(Data *ptr);
         static Data* deserialize(uintptr_t raw);
-    /*--------------------------------------------------------------------------*/
-
-    /*------------------------------- Data ------------------------------------*/
-        typedef struct s_data
-        {
-            void *ptr;
-        } t_data;
     /*--------------------------------------------------------------------------*/
 
 };
