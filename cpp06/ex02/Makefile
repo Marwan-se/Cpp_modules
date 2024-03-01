@@ -1,8 +1,8 @@
-NAME = 
+NAME = Base
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = 
-SRC = 
+INC = A.hpp B.hpp C.hpp Base.hpp
+SRC = Base.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
