@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 19:01:50 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/29 22:26:53 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/01 08:22:28 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 struct  Data
 {
     int     value;
+    std::string str;
 };
 
 class Serializer
