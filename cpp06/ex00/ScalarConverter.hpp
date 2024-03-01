@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 02:43:37 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/02/26 20:42:55 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/01 18:13:25 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SCALARCONVERTER_HPP
 
 #include <string>
+#include <iostream>
 
 class	ScalarConverter
 {
@@ -27,11 +28,7 @@ class	ScalarConverter
 
 	public:
 	/*-------------------------- Member Functions -------------------------*/
-		void	convert(std::string str);
-		void	printChar();
-		void	printInt();
-		void	printFloat();
-		void	printDouble();
+		static void convert(const std::string &str);
 	/*---------------------------------------------------------------------*/
 		
 };
