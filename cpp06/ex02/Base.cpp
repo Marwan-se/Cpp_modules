@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 10:39:23 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/01 10:42:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/02 18:03:12 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 Base::~Base()
 {
-    std::cout << "base destructor called" << std::endl;
+    // std::cout << "base destructor called" << std::endl;
 }

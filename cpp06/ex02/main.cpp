@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 11:01:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/01 15:45:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/02 23:32:56 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>
-
 
 static Base *generate(void)
 {
