@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 11:01:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/02 23:32:56 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/03 15:41:39 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <iostream>
 #include <stdexcept>
 
-static Base *generate(void)
+Base *generate(void)
 {
 	srand(time(0));
 	int random = rand() % 3;
@@ -35,7 +35,7 @@ static Base *generate(void)
 	}
 }
 
-static void    indentify(Base *p)
+void    indentify(Base *p)
 {
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
@@ -47,7 +47,7 @@ static void    indentify(Base *p)
 		std::cout << "Unknown typpe" << std::endl;
 }
 
-static void    indentify(Base &p)
+void    indentify(Base &p)
 {
 	try
 	{
