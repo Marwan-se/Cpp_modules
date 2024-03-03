@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 02:50:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/02 23:13:07 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/03 13:23:26 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,15 +153,15 @@ void	ScalarConverter::convert(const std::string &input)
 {
 	if (handleSpecials(input))
 		return ;
-	else if (!isdigit(input[0]) && input.length() == 1 )
+	else if (!isdigit(input[1]) && input.length() == 3 && input[0] == '\'' && input[2] == '\'')
 	{
-		if (isprint(input[0]))
-			std::cout << "char: '" << input[0] << "'" << std::endl;
+		if (isprint(input[1]))
+			std::cout << "char: '" << input[1] << "'" << std::endl;
 		else
 			std::cout << "char: Non displayable" << std::endl;
-		std::cout << "int: " << static_cast<int>(input[0]) << std::endl;
-		std::cout << "float: " << static_cast<float>(input[0]) << ".0f" << std::endl;
-		std::cout << "double: " << static_cast<double>(input[0]) << ".0" << std::endl;
+		std::cout << "int: " << static_cast<int>(input[1]) << std::endl;
+		std::cout << "float: " << static_cast<float>(input[1]) << ".0f" << std::endl;
+		std::cout << "double: " << static_cast<double>(input[1]) << ".0" << std::endl;
 	}
 	else if (num_type(input) == isInt)
 		convert_int(input);
