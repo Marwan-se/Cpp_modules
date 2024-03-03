@@ -1,8 +1,8 @@
-NAME = 
+NAME = whatever
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = 
-SRC = 
+INC = whatever.hpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
