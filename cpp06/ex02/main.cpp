@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 11:01:07 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/03 15:41:39 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/03 15:42:20 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ Base *generate(void)
 
 void    indentify(Base *p)
 {
-	if (dynamic_cast<A*>(p))
+	if (dynamic_cast<A*>(p) != 0)
 		std::cout << "A" << std::endl;
-	else if (dynamic_cast<B*>(p))
+	else if (dynamic_cast<B*>(p) != 0)
 		std::cout << "B" << std::endl;
-	else if (dynamic_cast<C*>(p))
+	else if (dynamic_cast<C*>(p) != 0)
 		std::cout << "C" << std::endl;
 	else
 		std::cout << "Unknown typpe" << std::endl;
