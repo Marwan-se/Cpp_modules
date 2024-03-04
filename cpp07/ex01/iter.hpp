@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:02:14 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/04 18:37:04 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/04 19:34:03 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,16 @@
 #include <cstddef>
 #include <string>
 
-template <typename T1, typename T2>
-void iter(T1 *arr, size_t len, T2 f)
+template <class T2>
+void print(T2 &x)
 {
-	for (size_t i = 0; i < len; i++)
+	std::cout << x << std::endl;
+}
+
+template <class T1, class T2>
+void iter(T1 *arr, int len, T2 f)
+{
+	for (int i = 0; i < len; i++)
 	{
 		f(arr[i]);
 	}

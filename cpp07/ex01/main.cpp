@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:02:16 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/04 18:37:39 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/04 19:33:49 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,10 @@
 //   return 0;
 // }
 
-void print(int &x)
-{
-	std::cout << x << std::endl;
-}
 
 int main()
 {
 	int tab[] = { 0, 1, 2, 3, 4 };
-	iter(tab, 5, print);
+	iter(tab, 5, print<int>);
 	return 0;
-	
 }
