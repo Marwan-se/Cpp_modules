@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Array.cpp                                          :+:      :+:    :+:   */
+/*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:46:46 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/04 16:33:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/04 19:40:28 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Array<T>::~Array()
 }
 
 template<class T>
-T &Array<T>::operator[](int index)
+T &Array<T>::operator[](int index) const
 {
 	if (index < 0 || index >= len)
 		throw Array::out_of_range();

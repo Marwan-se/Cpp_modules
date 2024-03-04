@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 23:37:44 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/04 16:35:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/04 19:40:12 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ template<class T>   class Array
 		Array(const Array &copy);
 		Array &operator=(const Array &rhs);
 		~Array();
-		T &operator[](int index);
+		T &operator[](const int index) const;
 		unsigned int size() const;
 		class out_of_range : public std::exception
 		{
