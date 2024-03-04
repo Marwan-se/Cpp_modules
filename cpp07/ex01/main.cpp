@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:02:16 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/03 22:45:39 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:46:27 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
   return o;
 }
 
-template< typename T >
+template< class T >
 void print( T& x )
 {
   std::cout << x << std::endl;
