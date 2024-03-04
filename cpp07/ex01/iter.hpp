@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:02:14 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/03 22:37:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/04 18:37:04 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 #include <cstddef>
 #include <string>
 
-template <class T1, class T2> void  iter(T1 &array, size_t arrlen, T2 func)
+template <typename T1, typename T2>
+void iter(T1 *arr, size_t len, T2 f)
 {
-    for (size_t i = 0; i < arrlen; i++)
-    {
-        func(array[i]);
-    }
+	for (size_t i = 0; i < len; i++)
+	{
+		f(arr[i]);
+	}
 }
 
 #endif
