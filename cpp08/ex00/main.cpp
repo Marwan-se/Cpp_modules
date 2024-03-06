@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:49:30 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/06 20:43:23 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/06 20:46:33 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,4 @@ int main()
     forward_list.push_front(1);
     easyfind(forward_list, 5);
     // printlist(forward_list);
-    
 }
