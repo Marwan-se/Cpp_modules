@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:49:30 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/06 18:23:01 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/06 20:43:23 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,11 @@ int main()
     std::cout << "/////////////////////////////" << std::endl;
 
     std::forward_list<int> forward_list;
-    forward_list.push_front(1);
-    forward_list.push_front(2);
-    forward_list.push_front(3);
-    forward_list.push_front(4);
     forward_list.push_front(5);
+    forward_list.push_front(4);
+    forward_list.push_front(3);
+    forward_list.push_front(2);
+    forward_list.push_front(1);
     easyfind(forward_list, 5);
     // printlist(forward_list);
     
