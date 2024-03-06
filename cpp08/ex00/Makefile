@@ -1,7 +1,7 @@
 NAME = easyfind
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = easyfind.hpp easyfind.tpp
+INC = easyfind.hpp
 SRC = main.cpp 
 OBJ = $(SRC:.cpp=.o)
 
