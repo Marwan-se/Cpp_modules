@@ -1,8 +1,8 @@
-NAME = 
+NAME = Span
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-INC = .hpp
-SRC = .cpp .cpp
+INC = Span.hpp
+SRC = Span.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -22,3 +22,5 @@ fclean: clean
 re: fclean $(NAME)
 
 .PHONY: all clean fclean re
+
+
