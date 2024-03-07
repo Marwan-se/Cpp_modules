@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:49:30 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:34:57 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/07 20:16:24 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int main()
     vector.push_back(3);
     vector.push_back(4);
     vector.push_back(5);
-    easyfind(vector, 1);
+    easyfind(vector, 2);
     // printvector(vector);
     std::cout << std::endl;
 
@@ -61,7 +61,7 @@ int main()
     deque.push_back(3);
     deque.push_back(4);
     deque.push_back(5);
-    easyfind(deque, 3);
+    easyfind(deque, 6);
     // printdeque(deque);
     std::cout << std::endl;
 
