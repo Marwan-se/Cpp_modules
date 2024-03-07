@@ -6,11 +6,14 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:24:58 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/07 12:02:36 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/07 13:56:06 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+#include <map>
+#include <stack>
+#include <vector>
 
 
 // int main()
@@ -47,6 +50,4 @@ int main()
     {
         std::cerr << e.what() << std::endl;
     }
-
-    return 0;
 }
