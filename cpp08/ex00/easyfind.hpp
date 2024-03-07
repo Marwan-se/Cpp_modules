@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:49:25 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/06 18:22:17 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/07 21:04:21 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ template<class T> void easyfind(T &s1, int s2)
 	else
 		std::cout << "Element not found" << std::endl;
 }
-
-
 
 #endif
