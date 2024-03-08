@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:24:58 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/08 17:55:16 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/08 18:34:37 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,20 @@
 
 int main()
 {
-    std::vector<int> numbers(10000);
-    for (int i = 0; i < 10000; ++i)
+    std::vector<int> numbers(20);
+    for (int i = 0; i < 20; ++i)
     {
-        numbers[i] = i + 1;
+        numbers[i] = i * 2;
     }
     try
     {
-        Span sp = Span(10000);
+        Span sp = Span(20);
         sp.addNumber(numbers);
         std::cout << "Span updated" << std::endl;
         std::cout << "shortest span: " << sp.shortestSpan() << std::endl;
         std::cout << "longest span: " << sp.longestSpan() << std::endl;
-        sp.addNumber(1);
+        // sp.addNumber(1);
+        sp.printnumbers();
     }
     catch (std::exception &e)
     {

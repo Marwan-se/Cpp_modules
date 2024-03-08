@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:24:53 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/08 17:47:29 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/08 18:34:49 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,12 @@ void    Span::addNumber(const std::vector<int> &newnumbers)
     if (numbers.size() + newnumbers.size() > N)
         throw std::runtime_error("Adding these numbers will exceed the maximum capacity of the Span");
     numbers.insert(numbers.end(), newnumbers.begin(), newnumbers.end());
+}
+
+void    Span::printnumbers()
+{
+    std::cout << "Numbers in the Span:\n";
+    for (size_t i = 0; i < numbers.size(); i++)
+        std::cout << numbers[i] << "\n";
+    std::cout << std::endl;
 }
