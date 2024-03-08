@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 17:13:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/07 20:10:43 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/08 10:48:32 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,68 +14,68 @@
 #include <list>
 
 
-// int main()
-// {
-//     MutantStack<int> mstack;
+int main()
+{
+    MutantStack<int> mstack; //stack
+    std::list<int> lstack; //list
 
-//     mstack.push(5);
-//     mstack.push(17);
+    mstack.push(5); //stack
+    mstack.push(17); //stack
 
-//     std::cout << mstack.top() << std::endl;
+    lstack.push_back(5); //list
+    lstack.push_back(17); //list
 
-//     mstack.pop();
+    std::cout << "stack: " << mstack.top() << std::endl; //stack
 
-//     std::cout << mstack.size() << std::endl;
+    std::cout<< "list: " << lstack.back() << std::endl; //list
 
-//     mstack.push(3);
-//     mstack.push(5);
-//     mstack.push(737);
-//     mstack.push(0);
+    mstack.pop(); //stack
 
-//     MutantStack<int>::iterator it = mstack.begin();
-//     MutantStack<int>::iterator ite = mstack.end();
+    lstack.pop_back(); //list
 
-//     ++it;
-//     --it;
+    std::cout << "stack size: " << mstack.size() << std::endl; //stack
+    std::cout << "list size: " << lstack.size() << std::endl; //list
 
-//     while (it != ite)
-//     {
-//         std::cout << *it << std::endl;
-//         ++it;
-//     }
-//     std::stack<int> s(mstack);
-//     return 0;
-// }
+    mstack.push(3); //stack
+    mstack.push(5); //stack
+    mstack.push(737); //stack
+    mstack.push(0); //stack
 
-// int main()
-// {
-//     std::list<int> lstack;
+    lstack.push_back(3); //list
+    lstack.push_back(5); //list
+    lstack.push_back(737); //list
+    lstack.push_back(0); //list
 
-//     lstack.push_back(5);
-//     lstack.push_back(17);
+    MutantStack<int>::iterator it = mstack.begin();//stack
+    MutantStack<int>::iterator ite = mstack.end();//stack
 
-//     std::cout << lstack.back() << std::endl;
-//     lstack.pop_back();
-//     std::cout << lstack.size() << std::endl;
+    MutantStack<int, std::list<int>>::iterator lit = lstack.begin(); //list
+    MutantStack<int, std::list<int>>::iterator lite = lstack.end(); //list
 
-//     // std::cout << "size: " << lstack.size() << std::endl;
+    ++it; //stack
+    --it; //stack
 
-//     lstack.push_back(3);
-//     lstack.push_back(5);
-//     lstack.push_back(737);
-//     lstack.push_back(0);
+    ++lit; //list
+    --lit; //list
 
-//     MutantStack<int, std::list<int>>::iterator lit = lstack.begin();
-//     MutantStack<int, std::list<int>>::iterator lite = lstack.end();
+    // stack loop
+    while (it != ite)
+    {
+        std::cout << "stack: " << *it << std::endl;
+        ++it;
+    }
 
-//     ++lit;
-//     --lit;
+    // list loop
+    while (lit != lite)
+    {
+        std::cout << "list: " << *lit << std::endl;
+        ++lit;
+    }
+    
+    // stack copy
+    std::stack<int> s(mstack);
+    // list copy
+    std::list<int> l(lstack);
 
-//     while (lit != lite)
-//     {
-//         std::cout << *lit << std::endl;
-//         ++lit;
-//     }
-
-//     return 0;
-// }
+    return 0;
+}
