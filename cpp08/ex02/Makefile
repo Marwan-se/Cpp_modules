@@ -1,7 +1,7 @@
 NAME = Mutants
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++11
-INC = MutantStack.hpp MutantStack.tpp
+INC = MutantStack.hpp
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
