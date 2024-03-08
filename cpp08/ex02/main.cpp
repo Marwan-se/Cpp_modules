@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 17:13:10 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/08 10:48:32 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/08 13:10:54 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,6 @@ int main()
         std::cout << "list: " << *lit << std::endl;
         ++lit;
     }
-    
-    // stack copy
-    std::stack<int> s(mstack);
-    // list copy
-    std::list<int> l(lstack);
 
     return 0;
 }
