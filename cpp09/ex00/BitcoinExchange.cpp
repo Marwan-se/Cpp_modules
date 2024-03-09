@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/09 20:29:17 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/09 21:27:48 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,24 +90,24 @@ bool isAllDigits(const std::string& str)
 }
 
 
-void    isYear(int year)
+void    BitcoinExchange::isYear(int year)
 {
 	if (year < 2009 || year < 0)
 		throw std::invalid_argument("Error: Invalid year.");
 }
 
-bool    is_leap_year(int year)
+bool    BitcoinExchange::is_leap_year(int year)
 {
 	return (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
 }
 
-void    isMonth(int month)
+void    BitcoinExchange::isMonth(int month)
 {
 	if (month < 1 || month > 12)
 		throw std::invalid_argument("Error: Invalid month.");
 }
 
-bool    ParseDate(std::string date)
+bool    BitcoinExchange::ParseDate(std::string date)
 {
 	std::string year = date.substr(0, 4);
 	std::string month = date.substr(5, 2);

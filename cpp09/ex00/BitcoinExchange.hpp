@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:14 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/09 19:34:38 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/09 21:26:12 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ class   BitcoinExchange
         void    parse_input(std::ifstream &input);
         void    check_vline(std::string date);
         void    getdata();
+        bool    ParseDate(std::string date);
+        void    isYear(int year);
+        bool    is_leap_year(int year);
+        void    isMonth(int month);
 };
 
 
