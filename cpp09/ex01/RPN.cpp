@@ -6,8 +6,29 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:36:23 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/10 02:10:04 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/10 02:18:21 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
+
+RPN::RPN()
+{
+}
+
+RPN::RPN(const RPN &copy)
+{
+	*this = copy;
+}
+
+RPN::~RPN()
+{
+}
+
+RPN &RPN::operator=(const RPN &copy)
+{
+	(void)copy;
+	return (*this);
+}
+/*-------------------------------------------------------------*/
+
