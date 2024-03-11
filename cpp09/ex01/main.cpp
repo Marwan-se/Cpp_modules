@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:36:26 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/10 08:19:48 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/11 21:22:54 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ int main(int ac, char **av)
 	}
 	
 	std::string input = av[1];
-	// std::cout << input << std::endl;
-	rpn.parse_input(input);
+	rpn.read_input(input);
 	
 	return 0;
 }
