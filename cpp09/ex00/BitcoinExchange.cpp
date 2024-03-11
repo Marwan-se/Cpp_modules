@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/09 21:27:48 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/11 23:02:21 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,9 +113,7 @@ bool    BitcoinExchange::ParseDate(std::string date)
 	std::string month = date.substr(5, 2);
 	std::string day = date.substr(8, 2);
 	int daysInMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-	
-	
-	
+
 	if (year.length() != 4 || month.length() != 2 || day.length() != 2)
 		return false;
 	if (date[4] != '-' || date[7] != '-')
