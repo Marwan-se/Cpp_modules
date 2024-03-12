@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:36:23 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/11 22:18:54 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/12 01:04:48 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	RPN::read_input(std::string input)
 				std::cout << "Invalid input" << std::endl;
 				exit(1);
 			}
-			_myStack.push(atoi(&input[i]));
+			_myStack.push(num);
 		}
 		else if (ops.find(input[i]) != std::string::npos)
 		{
