@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:37 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/13 04:44:50 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/25 01:24:04 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ class   PmergeMe
         void    dmerge(std::deque<int> &v1, std::deque<int> &v2);
 };
 
+std::vector<std::pair<int, int> > MakePairs(std::vector<int> &vec);
+void	algorithm(std::vector<int> &vec);
 
 #endif

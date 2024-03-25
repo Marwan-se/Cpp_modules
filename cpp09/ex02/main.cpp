@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:30 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/15 04:06:11 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/25 01:24:09 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,11 @@ int main(int ac, char **av)
 	if (ac < 2)
 		ErrMsg();
 	checkAndParseParams(ac, av);
-	
+    std::vector<int> vec;
+    for (int i = 1; i < ac; ++i)
+    {
+        std::string tmp = av[i];
+        vec.push_back(std::atoi(tmp.c_str()));
+    }
+    algorithm(vec);
 }
