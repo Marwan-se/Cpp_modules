@@ -6,37 +6,19 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:35 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/25 01:41:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/25 02:00:43 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 
-std::vector<int> vec;
-std::deque<int> deq;
 
-PmergeMe::PmergeMe()
+void	merge()
+
+void	mergesort(std::vectot<int> &vec)
 {
+	
 }
-
-PmergeMe::PmergeMe(const PmergeMe &copy)
-{
-	*this = copy;
-}
-
-PmergeMe::~PmergeMe()
-{
-}
-
-PmergeMe &PmergeMe::operator=(const PmergeMe &copy)
-{
-	(void)copy;
-	return (*this);
-}
-
-/*-----------------------------MERGE FUNCTIONS---------------------------------*/
-
-
 std::vector<std::pair<int, int> > MakePairs(std::vector<int> &vec)
 {
 	std::vector<std::pair<int, int> > pairs;
@@ -49,8 +31,6 @@ std::vector<std::pair<int, int> > MakePairs(std::vector<int> &vec)
 	}
 	return pairs;
 }
-
-
 
 bool catchStruggler(int &straggler, std::vector<int> &arr)
 {
