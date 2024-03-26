@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:35 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/26 02:52:10 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/26 03:35:59 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	algorithm_Vec(std::vector<int> &vec)
 	std::vector<std::pair<int, int> > pairs;
 	int size = vec.size();
 	int straggler = -1;
-	
+
 	// start timer
 	clock_t start = clock();
 
@@ -208,7 +208,7 @@ void	algorithm_Deq(std::deque<int> &deq)
 	//creating x and y
 	std::deque<int> x, y;
 	create_x_y_Deq(pairs, x, y);
-	
+
 	//sorting x and y using insertion sort
 	insetionSort_Deq (y);
 
@@ -225,7 +225,7 @@ void	algorithm_Deq(std::deque<int> &deq)
 	// end timer
 	clock_t end = clock();
 	double elapsed_secs = double(end - start) / CLOCKS_PER_SEC;
-	
+
 	// for (size_t i = 0; i < y.size(); i++)
 	// 	std::cout << y[i] << " ";
 	std::cout << "Time to process a range of " << size << " elements with std::deque : " << std::fixed << elapsed_secs << " us" << std::endl;
