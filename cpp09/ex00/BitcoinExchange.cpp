@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/21 21:15:05 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/26 03:13:43 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iomanip>
+#include <ios>
 #include <iostream>
 #include <iterator>
 #include <sstream>
@@ -167,18 +168,18 @@ void    BitcoinExchange::check_vline(std::string line)
 		std::cout << "Error: bad input => " << line << std::endl;
 	if (!ParseDate(date))
 		std::cout << "Error: bad input => " << date << std::endl;
-	if (!ParseValue(values))
-		std::cout << "Error: bad value" << std::endl;
 	else if (value < 0)
 		std::cout << "Error: not a positive number." << std::endl;
 	else if (value > 1000)
 		std::cout << "Error: too large a number." << std::endl;
+	else if (!ParseValue(values))
+		std::cout << "Error: bad value =>  " << values << std::endl;
 	else
 	{
 		itr = this -> _btcDataBase.upper_bound(date);
 		if (itr->first.compare(date) != 0 )
 			--itr;
-		std::cout << date << " => " << value << " = " << std::setprecision(10) << itr->second * value << std::endl;
+		std::cout << date << " => " << value << " = " << itr->second * value << std::endl;
 	}
 }
 
