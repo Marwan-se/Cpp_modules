@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:35 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/26 02:24:07 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/26 02:52:10 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -228,5 +228,6 @@ void	algorithm_Deq(std::deque<int> &deq)
 	
 	// for (size_t i = 0; i < y.size(); i++)
 	// 	std::cout << y[i] << " ";
-	std::cout << "Time to process a range of " << size << " elements with std::vector : " << std::fixed << elapsed_secs << " us" << std::endl;
+	std::cout << "Time to process a range of " << size << " elements with std::deque : " << std::fixed << elapsed_secs << " us" << std::endl;
+
 }
