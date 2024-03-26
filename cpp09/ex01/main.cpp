@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:36:26 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/11 21:22:54 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/21 22:13:03 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,15 @@ int main(int ac, char **av)
 		std::cout << "Usage: ./RPN \"[RPN expression]\"" << std::endl;
 		return (1);
 	}
-	
 	std::string input = av[1];
-	rpn.read_input(input);
-	
+
+	try
+	{
+		rpn.read_input(input);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	return 0;
 }
