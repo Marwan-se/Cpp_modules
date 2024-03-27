@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/26 03:13:43 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/27 00:53:02 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,11 @@ bool isAllDigits(const std::string& str)
 }
 
 
-void    BitcoinExchange::isYear(int year)
+int    BitcoinExchange::isYear(int year)
 {
 	if (year < 2009 || year < 0)
-		throw std::invalid_argument("Error: Invalid year.");
+		return 0;
+	return 1;
 }
 
 bool    BitcoinExchange::is_leap_year(int year)
@@ -103,37 +104,59 @@ bool    BitcoinExchange::is_leap_year(int year)
 	return (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
 }
 
-void    BitcoinExchange::isMonth(int month)
+int    BitcoinExchange::isMonth(int month)
 {
 	if (month < 1 || month > 12)
-		throw std::invalid_argument("Error: Invalid month.");
+		return 0;
+	return 1;
+}
+
+//function to skip whitespaces
+int	skip_space(std::string str)
+{
+	size_t i = 0;
+	while (str[i] <= 32)
+		i++;
+	return i;
 }
 
 bool    BitcoinExchange::ParseDate(std::string date)
 {
-	std::string year = date.substr(0, 4);
-	std::string month = date.substr(5, 2);
-	std::string day = date.substr(8, 2);
+	// start = skipsc()
+	int start = skip_space(date);
+	std::string year = date.substr(start, 4);
+	std::string month = date.substr(start + 5, 2);
+	std::string day = date.substr(start + 8, 2);
 	int daysInMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 	if (year.length() != 4 || month.length() != 2 || day.length() != 2)
 		return false;
-	if (date[4] != '-' || date[7] != '-')
+	if (date[start + 4] != '-' || date[start + 7] != '-')
 		return false;
 	if (std::atoi(month.c_str()) < 0 || std::atoi(month.c_str()) > 12)
 		return false;
-	if (std::atoi(day.c_str()) < 0 || std::atoi(day.c_str()) > 31)
+	if (std::atoi(day.c_str()) < 1 || std::atoi(day.c_str()) > 31)
 		return false;
 	if (std::atoi(year.c_str()) < 2009 || \
 		(atoi(year.c_str()) == 2009 && atoi(month.c_str()) == 1 && atoi(day.c_str()) < 2))
 		return false;
-	isMonth(std::atoi(month.c_str()));
+	if (!isMonth(std::atoi(month.c_str())))
+		return false;
 	isYear(std::atoi(year.c_str()));
 	if (std::atoi(month.c_str()) == 2 && is_leap_year(std::atoi(year.c_str())))
 		daysInMonth[2] = 29;
 	if (std::atoi(day.c_str()) > daysInMonth[std::atoi(month.c_str())])
 		return false;
 	return true;
+}
+
+//function to skip the whitespaces at the end of the value if found
+int	skip_space_end(std::string str)
+{
+	size_t i = str.length() - 1;
+	while (str[i] <= 32)
+		i--;
+	return i;
 }
 
 bool	BitcoinExchange::ParseValue(std::string value)
@@ -161,10 +184,13 @@ void    BitcoinExchange::check_vline(std::string line)
 		std::cout << "Error: bad input => " << line << std::endl;
 		return ;
 	}
-	std::string date = line.substr(0, pipeXspace);
+	int start = skip_space(line);
+	std::string date = line.substr(start, pipeXspace - start);
 	std::string values = line.substr(pipeXspace + 3); //skip the " | " part
+	int end = skip_space_end(values);
+	values = values.substr(0, end + 1);
 	float value = std::atof(values.c_str());
-	if (line.empty() || line .size() < 12)
+	if (line.empty() || line.size() < 12)
 		std::cout << "Error: bad input => " << line << std::endl;
 	if (!ParseDate(date))
 		std::cout << "Error: bad input => " << date << std::endl;
