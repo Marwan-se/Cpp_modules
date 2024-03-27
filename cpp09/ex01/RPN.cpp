@@ -6,31 +6,14 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 01:36:23 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/26 03:23:32 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/27 21:33:42 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
+#include <cctype>
 
-
-RPN::RPN()
-{
-}
-
-RPN::RPN(const RPN &copy)
-{
-	*this = copy;
-}
-
-RPN::~RPN()
-{
-}
-
-RPN &RPN::operator=(const RPN &copy)
-{
-	(void)copy;
-	return (*this);
-}
+std::stack<int> _myStack;
 
 /*-------------------------------------------------------------*/
 
@@ -53,7 +36,8 @@ int	evaluate(int a, int b, char op)
 	return (0);
 }
 
-void	RPN::read_input(std::string input)
+
+void	read_input(std::string input)
 {
 	int operands = 0;
 	std::string ops = "+-*/";
