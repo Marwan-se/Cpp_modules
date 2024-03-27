@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/27 00:53:02 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/27 01:16:00 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,6 +194,8 @@ void    BitcoinExchange::check_vline(std::string line)
 		std::cout << "Error: bad input => " << line << std::endl;
 	if (!ParseDate(date))
 		std::cout << "Error: bad input => " << date << std::endl;
+	else if (date.length() < 10 || date.length() > 10)
+		std::cout << "Error: bad input => " << date << std::endl;
 	else if (value < 0)
 		std::cout << "Error: not a positive number." << std::endl;
 	else if (value > 1000)
@@ -202,7 +204,7 @@ void    BitcoinExchange::check_vline(std::string line)
 		std::cout << "Error: bad value =>  " << values << std::endl;
 	else
 	{
-		itr = this -> _btcDataBase.upper_bound(date);
+		itr = this -> _btcDataBase.lower_bound(date);
 		if (itr->first.compare(date) != 0 )
 			--itr;
 		std::cout << date << " => " << value << " = " << itr->second * value << std::endl;
