@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/27 01:16:00 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/27 02:29:45 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,8 @@ int	skip_space_end(std::string str)
 
 bool	BitcoinExchange::ParseValue(std::string value)
 {
+	if (value[0] == '+' || value[0] == '-')
+		value = value.substr(1);
 	if (value.empty())
 		return false;
 	if (!isAllDigits(value))
