@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:37 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/26 02:06:26 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/27 21:37:29 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <vector>
 # include <algorithm>
 #include <deque>
+
+void    checkErrors(int ac, char **av);
 
 /*-------------------------------VECTOR---------------------------------*/
 void	algorithm_Vec(std::vector<int> &vec);

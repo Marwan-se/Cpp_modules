@@ -6,13 +6,54 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:35 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/26 03:35:59 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/27 21:38:14 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 #include <cstddef>
 #include <ios>
+
+/*-------------------------------UTILS---------------------------------*/
+
+void    check_ifpositive(char **av, int i, int j)
+{
+    while (av[i])
+	{
+        while (av[i][j])
+		{
+            if (av[i][j] < '0' || av[i][j] > '9')
+                throw std::invalid_argument("Error");
+            j++;
+        }
+        j = 0;
+        i++;
+    }
+    return ;
+}
+
+void    isnum(char **av, int i)
+{
+    unsigned long long    tmp;
+
+    while (av[i])
+	{
+        tmp = atoi(av[i]);
+        if (tmp > 2147483647)
+            throw std::invalid_argument("Error");
+        i++;
+    }
+    return ;
+}
+
+void    checkErrors(int ac, char **av)
+{
+	if (ac < 2)
+		throw std::invalid_argument("Error");
+    check_ifpositive(av, 1, 0);
+    isnum(av, 0);
+    return ;
+}
 
 /*-------------------------------VECTOR---------------------------------*/
 
@@ -229,5 +270,4 @@ void	algorithm_Deq(std::deque<int> &deq)
 	// for (size_t i = 0; i < y.size(); i++)
 	// 	std::cout << y[i] << " ";
 	std::cout << "Time to process a range of " << size << " elements with std::deque : " << std::fixed << elapsed_secs << " us" << std::endl;
-
 }
