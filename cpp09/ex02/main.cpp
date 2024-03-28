@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:30 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/28 00:12:22 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/28 01:14:38 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,3 @@ int main(int ac, char **av)
     algorithm_Deq(deq);
 
 }
-
-
-/* 
-    * opt : let one sign douz like "+0"
-*/ 

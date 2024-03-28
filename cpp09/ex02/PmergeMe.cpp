@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 03:43:35 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/28 00:24:00 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/28 01:27:06 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	check_ifpositive(char **av)
 
 void    isnum(char **av, int i)
 {
-    unsigned long long    tmp;
+	int tmp;
 
     while (av[i])
 	{
@@ -166,11 +166,6 @@ void	algorithm_Vec(std::vector<int> &vec)
 	for (size_t i = 0; i < y.size(); i++)
 		std::cout << y[i] << " ";
 	std::cout << std::endl;
-
-	if (std::is_sorted(y.begin(), y.end()))
-		std::cout << "Sorted" << std::endl;
-	else
-		std::cout << "Not sorted" << std::endl;
 
 	std::cout << "Time to process a range of " << size << " elements with std::vector : " << std::fixed << elapsed_secs << " us" << std::endl;
 }
