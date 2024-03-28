@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:20 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/28 00:25:41 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/28 00:46:46 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void    valid_file()
 
 int main(int ac, char **av)
 {
-    (void)av;
     BitcoinExchange btc;
     if (ac != 2)
         valid_args();
