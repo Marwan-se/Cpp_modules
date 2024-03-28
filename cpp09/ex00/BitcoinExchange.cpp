@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:15 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/27 02:29:45 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/28 23:16:44 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,9 +124,11 @@ bool    BitcoinExchange::ParseDate(std::string date)
 {
 	// start = skipsc()
 	int start = skip_space(date);
+	
 	std::string year = date.substr(start, 4);
 	std::string month = date.substr(start + 5, 2);
 	std::string day = date.substr(start + 8, 2);
+	
 	int daysInMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 	if (year.length() != 4 || month.length() != 2 || day.length() != 2)
@@ -192,9 +194,9 @@ void    BitcoinExchange::check_vline(std::string line)
 	int end = skip_space_end(values);
 	values = values.substr(0, end + 1);
 	float value = std::atof(values.c_str());
-	if (line.empty() || line.size() < 12)
+	if (line.empty() || line.size() < 14)
 		std::cout << "Error: bad input => " << line << std::endl;
-	if (!ParseDate(date))
+	else if (!ParseDate(date))
 		std::cout << "Error: bad input => " << date << std::endl;
 	else if (date.length() < 10 || date.length() > 10)
 		std::cout << "Error: bad input => " << date << std::endl;

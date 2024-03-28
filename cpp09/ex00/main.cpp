@@ -6,7 +6,7 @@
 /*   By: msekhsou <msekhsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 10:33:20 by msekhsou          #+#    #+#             */
-/*   Updated: 2024/03/28 00:46:46 by msekhsou         ###   ########.fr       */
+/*   Updated: 2024/03/28 23:08:27 by msekhsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,5 @@ int main(int ac, char **av)
     std::ifstream input(av[1]);
     if (!input.is_open())
         valid_file();
-    try
-    {
-        btc.parse_input(input);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    btc.parse_input(input);
 }
